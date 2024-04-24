@@ -24,5 +24,15 @@ namespace CarLynx
         {
             InitializeComponent();
         }
+
+        private void exitEvent(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void loginAction(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
