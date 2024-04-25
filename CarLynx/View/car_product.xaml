@@ -1,0 +1,120 @@
+﻿<UserControl x:Class="CarLynx.View.car_product"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CarLynx.View"
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="800">
+
+    <UserControl.Resources>
+        <Style TargetType="Button" x:Key="btncutsomstyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" CornerRadius="10" Background="{TemplateBinding Background}"
+         BorderBrush="{TemplateBinding BorderBrush}"
+         BorderThickness="{TemplateBinding BorderThickness}"
+         RenderTransformOrigin="0.5,0.5">
+                            <Border.RenderTransform>
+                                <ScaleTransform ScaleX="1" ScaleY="1"/>
+                            </Border.RenderTransform>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FFEAEAEA"/>
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                      Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                      To="0.9" Duration="0:0:0.2"/>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                      Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                      To="0.9" Duration="0:0:0.2"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                      Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                      To="1" Duration="0:0:0.1"/>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                      Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                      To="1" Duration="0:0:0.1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+
+    <Border BorderThickness="0,0,0,2" Background="White" VerticalAlignment="Center" HorizontalAlignment="Center" Height="380" Width="780" Margin="0,10,0,0">
+        <Border.BorderBrush>
+            <SolidColorBrush Color="#FF9E9E9E" Opacity="0.2"/>
+        </Border.BorderBrush>
+        <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Height="379" Width="777">
+            <Label Content="TESLA" Margin="106,314,0,0" FontSize="20" Foreground="#FF828282" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <Label Content="Model S" Margin="104,281,0,0" Foreground="#FF676767" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" />
+            <Button Style="{StaticResource btncutsomstyle}" Cursor="Hand" Content="View" HorizontalAlignment="Left" Margin="635,314,0,0" VerticalAlignment="Top" Height="32" Width="85" Background="{x:Null}" BorderBrush="#FF797676" Click="Button_Click_1"/>
+            <Image HorizontalAlignment="Left" Height="276" Margin="19,17,0,0" VerticalAlignment="Top" Width="387" Source="/View/model_1.jpg"/>
+            <Image HorizontalAlignment="Left" Height="57" Margin="19,296,0,0" VerticalAlignment="Top" Width="63" Source="/View/tesla_logo.png"/>
+            <Border BorderThickness="3,0,0,0" Margin="435,38,39,140">
+                <Border.BorderBrush>
+                    <SolidColorBrush Color="Black" Opacity="0.4"/>
+                </Border.BorderBrush>
+                <TextBlock HorizontalAlignment="Left" Margin="15,33,0,0" TextWrapping="Wrap" Text="The Tesla Model S is an all-electric luxury sedan celebrated for its advanced technology, high performance, and stylish design. It offers a spacious and minimalist interior with a large touchscreen interface. With rapid acceleration, long-range capability, and cutting-edge autopilot features, the Model S delivers an exciting yet eco-friendly driving experience. Its sleek exterior design makes it a standout choice for those seeking innovation and sustainability in their vehicle." VerticalAlignment="Top" Height="143" Width="264" FontSize="10">
+                    <TextBlock.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.6"/>
+                    </TextBlock.Foreground>
+                </TextBlock>
+            </Border>
+
+            <Border BorderBrush="#FFF31A37" Margin="363,294,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="3,0,3,0" Height="44">
+                <StackPanel Height="64" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Label Content="149 mph" FontSize="16" FontWeight="Bold" Foreground="#FF6B6B6B" HorizontalContentAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0"/>
+                    <Label Content="Top Speed" RenderTransformOrigin="0.5,0.552" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,-10,0,-0.9">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="Black" Opacity="0.7"/>
+                        </Label.Foreground>
+                    </Label>
+                </StackPanel>
+            </Border>
+            <Border BorderBrush="#FFF31A37" Margin="469,294,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="44">
+                <StackPanel Height="64" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Label Content="3.8sec" FontSize="16" FontWeight="Bold" Foreground="#FF6B6B6B" HorizontalContentAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0"/>
+                    <Label Content="0-60 mph " RenderTransformOrigin="0.5,0.552" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,-10,0,-0.9">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="Black" Opacity="0.7"/>
+                        </Label.Foreground>
+                    </Label>
+                </StackPanel>
+            </Border>
+
+            <Label Content="$ 36500" Margin="435,276,0,0" FontSize="20" Foreground="#FF101010" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontWeight="Bold" Width="285" />
+            <Border BorderBrush="#FFF31A37" Margin="255,294,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="44">
+                <StackPanel Height="64" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <Label Content="330 KM" FontSize="16" FontWeight="Bold" Foreground="#FF6B6B6B" HorizontalContentAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0"/>
+                    <Label Content="Range (EPA est.)" RenderTransformOrigin="0.5,0.552" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,-10,0,-0.9">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="Black" Opacity="0.7"/>
+                        </Label.Foreground>
+                    </Label>
+                </StackPanel>
+            </Border>
+
+
+
+
+        </Grid>
+    </Border>
+
+</UserControl>

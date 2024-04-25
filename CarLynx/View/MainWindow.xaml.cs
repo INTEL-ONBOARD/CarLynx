@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 using CarLynx.Control;
+using CarLynx.View;
 
 namespace CarLynx
 {
@@ -60,6 +61,15 @@ namespace CarLynx
         {
             store_view.Visibility = Visibility.Visible;
             home_default_admin.Visibility = Visibility.Hidden;
+            itemView.Content = panelView;
+            for (int i=0; i < 5; i++)
+            {
+                car_product car = new car_product();
+                panelView.Children.Add(car);
+            }
+
+
+
         }
 
         private void backEvent(object sender, RoutedEventArgs e)

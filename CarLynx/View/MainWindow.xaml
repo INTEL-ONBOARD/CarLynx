@@ -465,12 +465,20 @@
                     <SolidColorBrush Color="Black" Opacity="0.6"/>
                 </Label.Foreground>
             </Label>
-            <ScrollViewer x:Name="itemView" Grid.Column="0" Margin="22,70,10,10" Background="#FFE089A5">
-                <StackPanel x:Name="panelView" Height="523" Width="803" Background="#FF8BDAE4"/>
+            <ScrollViewer x:Name="itemView" Grid.Column="0" Margin="22,138,10,46" VerticalScrollBarVisibility="Hidden">
+                <StackPanel x:Name="panelView" Width="803" ScrollViewer.VerticalScrollBarVisibility="Hidden"/>
 
             </ScrollViewer>
-
+            <Label Content="Scroll down to view more" HorizontalAlignment="Left" Margin="369,577,0,0" VerticalAlignment="Top">
+                <Label.Foreground>
+                    <SolidColorBrush Color="Black" Opacity="0.5"/>
+                </Label.Foreground>
+                <Label.Background>
+                    <SolidColorBrush Opacity="0.335"/>
+                </Label.Background>
+            </Label>
         </Grid>
+
 
 
 

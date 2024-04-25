@@ -13,3 +13,5 @@ C:\Users\wenuj\source\repos\CarLynx\CarLynx\obj\Debug\CarLynx.csproj.GenerateRes
 C:\Users\wenuj\source\repos\CarLynx\CarLynx\obj\Debug\CarLynx.csproj.CoreCompileInputs.cache
 C:\Users\wenuj\source\repos\CarLynx\CarLynx\obj\Debug\CarLynx.exe
 C:\Users\wenuj\source\repos\CarLynx\CarLynx\obj\Debug\CarLynx.pdb
+C:\Users\wenuj\source\repos\CarLynx\CarLynx\obj\Debug\View\car_product.g.cs
+C:\Users\wenuj\source\repos\CarLynx\CarLynx\obj\Debug\View\car_product.baml
