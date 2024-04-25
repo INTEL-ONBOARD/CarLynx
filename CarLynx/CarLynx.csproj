@@ -159,5 +159,8 @@
   <ItemGroup>
     <Resource Include="View\time-past.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\caret-square-left.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -55,5 +55,18 @@ namespace CarLynx
             login_window.Visibility = Visibility.Visible;
             home_default_admin.Visibility = Visibility.Hidden;
         }
+
+        private void gostoreAction(object sender, RoutedEventArgs e)
+        {
+            store_view.Visibility = Visibility.Visible;
+            home_default_admin.Visibility = Visibility.Hidden;
+        }
+
+        private void backEvent(object sender, RoutedEventArgs e)
+        {
+            store_view.Visibility = Visibility.Hidden;
+            home_default_admin.Visibility= Visibility.Visible;
+            
+        }
     }
 }

@@ -371,7 +371,7 @@
 
 
         <!--THIS IS THE VIEW FOR HOME SCREEN-->
-        <Grid x:Name="home_default_admin" Margin="44,52,36,25" Visibility="Visible">
+        <Grid x:Name="home_default_admin" Margin="44,52,36,25" Visibility="Hidden">
             <Grid.Background>
                 <ImageBrush Stretch="Uniform" ImageSource="/View/HOME_BG_2.png"/>
             </Grid.Background>
@@ -380,7 +380,7 @@
 
             <!--button for store view-->
 
-            <Button Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Left" Margin="843,366,0,0" VerticalAlignment="Top" Height="166" Width="168" Padding="0,0,0,0" Background="{x:Null}" BorderThickness="3,3,3,3" BorderBrush="#FFD6D5D5" Foreground="#FFAFAFAF">
+            <Button x:Name="storeBtn" Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Left" Margin="843,366,0,0" VerticalAlignment="Top" Height="166" Width="168" Padding="0,0,0,0" Background="{x:Null}" BorderThickness="3,3,3,3" BorderBrush="#FFD6D5D5" Foreground="#FFAFAFAF" Click="gostoreAction">
                 <StackPanel>
                     <Image Height="66" Width="50" Source="/View/shopping-cart-add.png" Opacity="0.3"/>
                     <TextBlock Text="Order now" HorizontalAlignment="Center" FontSize="20" FontFamily="Bahnschrift" Padding="0,10,0,0"/>
@@ -435,8 +435,40 @@
                 </StackPanel>
             </Button>
 
+        </Grid>
 
+        <Grid x:Name="store_view" Margin="44,52,36,25" Visibility="Visible">
 
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"></ColumnDefinition>
+                <ColumnDefinition Width="250px "></ColumnDefinition>
+
+            </Grid.ColumnDefinitions>
+
+            <Border Grid.Column="1"  BorderThickness="3,3,3,3" Margin="0,56,10,79" CornerRadius="20">
+                <Border.Background>
+                    <SolidColorBrush Color="#FFE2E1E1" Opacity="0.3"/>
+                </Border.Background>
+                <Grid >
+                    <!--content here-->
+                </Grid>
+
+            </Border>
+            <Button Style="{StaticResource btncutsomstyle}" Cursor="Hand" Grid.Column="1" Content="Purchase" HorizontalAlignment="Right" Margin="0,544,17,0" VerticalAlignment="Top" Height="51" Width="233" BorderBrush="{x:Null}" Background="#FF9523DA" Foreground="White" FontFamily="Bahnschrift" FontSize="16"/>
+            <Button x:Name="backBtn" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Left" Margin="22,22,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="28" Height="28" Click="backEvent">
+                <Button.Background>
+                    <ImageBrush ImageSource="/View/caret-square-left.png" TileMode="None" Stretch="UniformToFill" Opacity="0.5"/>
+                </Button.Background>
+            </Button>
+            <Label Content="Back to Home" HorizontalAlignment="Left" Margin="55,23,0,0" VerticalAlignment="Top">
+                <Label.Foreground>
+                    <SolidColorBrush Color="Black" Opacity="0.6"/>
+                </Label.Foreground>
+            </Label>
+            <ScrollViewer x:Name="itemView" Grid.Column="0" Margin="22,70,10,10" Background="#FFE089A5">
+                <StackPanel x:Name="panelView" Height="523" Width="803" Background="#FF8BDAE4"/>
+
+            </ScrollViewer>
 
         </Grid>
 
