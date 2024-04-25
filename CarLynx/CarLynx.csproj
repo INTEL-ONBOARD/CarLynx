@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Control\login_process.cs" />
     <Compile Include="Model\Dbhandler.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -96,7 +97,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Control\" />
     <Folder Include="Resources\Car_models\" />
   </ItemGroup>
   <ItemGroup>
@@ -119,6 +119,45 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\gmail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\poster.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\poster__.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\shopping-cart-add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\home_bg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\bell.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\bell_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\gear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\boxes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\exit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\circle-user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\HOME_BG_2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\time-past.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -166,6 +166,97 @@
             </Setter>
         </Style>
 
+        <Style TargetType="Button" x:Key="customBtn">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="outerBorder" Background="{TemplateBinding Background}"
+                                CornerRadius="10"  RenderTransformOrigin="0.5,0.5" >
+                            <Border.RenderTransform>
+                                <ScaleTransform ScaleX="1" ScaleY="1"/>
+                            </Border.RenderTransform>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="outerBorder"
+                                   Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                   To="1.2" Duration="0:0:0.3"/>
+                                            <DoubleAnimation Storyboard.TargetName="outerBorder"
+                                   Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                   To="1.2" Duration="0:0:3"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="outerBorder"
+                                   Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                   To="1" Duration="0:0:0.3"/>
+                                            <DoubleAnimation Storyboard.TargetName="outerBorder"
+                                   Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                   To="1" Duration="0:0:3"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style TargetType="Button" x:Key="btncutsomstyle">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" CornerRadius="10" Background="{TemplateBinding Background}"
+                 BorderBrush="{TemplateBinding BorderBrush}"
+                 BorderThickness="{TemplateBinding BorderThickness}"
+                 RenderTransformOrigin="0.5,0.5">
+                            <Border.RenderTransform>
+                                <ScaleTransform ScaleX="1" ScaleY="1"/>
+                            </Border.RenderTransform>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FFEAEAEA"/>
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                              Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                              To="0.9" Duration="0:0:0.2"/>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                              Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                              To="0.9" Duration="0:0:0.2"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                              Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                              To="1" Duration="0:0:0.1"/>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                              Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                              To="1" Duration="0:0:0.1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
 
 
 
@@ -178,12 +269,15 @@
                 <ImageBrush ImageSource="/View/close.ico" TileMode="None" Stretch="UniformToFill"/>
             </Button.Background>
         </Button>
-        <Grid Margin="71,74,71,54">
+
+
+        <!--THIS IS THE VIEW FOR LOGIN SCREEN-->
+        <Grid x:Name="login_window" Margin="71,74,71,54" Visibility="Hidden" >
             <Image HorizontalAlignment="Left" Height="509" Margin="302,0,0,0" VerticalAlignment="Center" Width="720" Source="/View/poster.png"/>
             <Grid x:Name="login_pane" Margin="29,22,691,54">
                 <!--<Button Style="{StaticResource RoundButtonStyle}" Content="Login" Margin="68,366,68,78" Background="{x:Null}" Cursor="Hand"/>-->
-                <TextBox Style="{StaticResource CustomTextBoxStyle}" Margin="0,69,0,0" TextWrapping="Wrap" Tag="yourEmail@gmail.com" Width="254" Height="55" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" />
-                <TextBox Style="{StaticResource CustomTextBoxStyle}" TextWrapping="Wrap" Tag="*******" Width="254" Height="55" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" Margin="0,154,0,0" />
+                <TextBox x:Name="uname" Style="{StaticResource CustomTextBoxStyle}" Margin="0,69,0,0" TextWrapping="Wrap" Tag="username@gmail.com" Width="254" Height="55" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" />
+                <TextBox x:Name="pwd" Style="{StaticResource CustomTextBoxStyle}" TextWrapping="Wrap" Tag="*******" Width="254" Height="55" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" Margin="0,154,0,0" />
                 <Button x:Name="exitBtn_Copy" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Center" Margin="0,237,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="50" Height="50" Click="loginAction">
                     <Button.Background>
                         <ImageBrush ImageSource="/View/login.png" TileMode="None" Stretch="UniformToFill">
@@ -265,7 +359,87 @@
 
             </Grid>
             <Label Content=" CarLynx © All Rights Reserved. " HorizontalAlignment="Left" Margin="109,438,0,0" VerticalAlignment="Top" Foreground="#FFA5A5A5"/>
+            <Border x:Name="error_box" Visibility="Visible" CornerRadius="20" BorderBrush="#FF949494" BorderThickness="1" HorizontalAlignment="Left" Height="40" Margin="367,500,0,0" VerticalAlignment="Top" Width="310">
+                <Border.Background>
+                    <SolidColorBrush Color="#FFE0C3BD" Opacity="0.1"/>
+                </Border.Background>
+                <Label Content="Given Username or password are not valid!" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            </Border>
         </Grid>
+
+
+
+
+        <!--THIS IS THE VIEW FOR HOME SCREEN-->
+        <Grid x:Name="home_default_admin" Margin="44,52,36,25" Visibility="Visible">
+            <Grid.Background>
+                <ImageBrush Stretch="Uniform" ImageSource="/View/HOME_BG_2.png"/>
+            </Grid.Background>
+
+
+
+            <!--button for store view-->
+
+            <Button Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Left" Margin="843,366,0,0" VerticalAlignment="Top" Height="166" Width="168" Padding="0,0,0,0" Background="{x:Null}" BorderThickness="3,3,3,3" BorderBrush="#FFD6D5D5" Foreground="#FFAFAFAF">
+                <StackPanel>
+                    <Image Height="66" Width="50" Source="/View/shopping-cart-add.png" Opacity="0.3"/>
+                    <TextBlock Text="Order now" HorizontalAlignment="Center" FontSize="20" FontFamily="Bahnschrift" Padding="0,10,0,0"/>
+                </StackPanel>
+            </Button>
+
+            <!--<Button x:Name="exitBtn_Copy4" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Left" Margin="972,508,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="#FFB51F1F" Foreground="{x:Null}" Width="60" Height="60" Click="exitEvent">
+                <Button.Background>
+                    <ImageBrush ImageSource="/View/shopping-cart-add.png" TileMode="None" Stretch="UniformToFill" Opacity="0.791"/>
+                </Button.Background>
+            </Button>-->
+
+            <!--<Button Style="{StaticResource customBtn}" HorizontalAlignment="Left" Margin="848,268,0,0" VerticalAlignment="Top" Height="198" Width="219" Padding="0,0,0,0" Background="{x:Null}" BorderThickness="5,5,5,5">
+                <StackPanel>
+                    <Image Height="100" Width="100" Source="/View/shopping-cart-add.png"/>
+                    <TextBlock Text="Buy now" HorizontalAlignment="Center" FontSize="20" FontFamily="Bahnschrift SemiBold" Padding="0,15,0,0"/>
+                </StackPanel>
+            </Button>-->
+
+
+
+            <Button x:Name="exitBtn_Copy5" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Left" Margin="108,18,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="28" Height="28" Click="exitEvent">
+                <Button.Background>
+                    <ImageBrush ImageSource="/View/bell_.png" TileMode="None" Stretch="UniformToFill" Opacity="0.5"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="exitBtn_Copy6" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Left" Margin="156,18,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="28" Height="28" Click="exitEvent">
+                <Button.Background>
+                    <ImageBrush ImageSource="/View/gear.png" TileMode="None" Stretch="UniformToFill" Opacity="0.5"/>
+                </Button.Background>
+            </Button>
+            <Button Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Left" Margin="843,287,0,0" VerticalAlignment="Top" Height="65" Width="168" Padding="0,0,0,0" Background="{x:Null}" BorderThickness="3,3,3,3" BorderBrush="#FFEFEFEF" Foreground="#FFAFAFAF">
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="20" Width="29" Source="/View/boxes.png" Opacity="0.3" VerticalAlignment="Center"/>
+                    <TextBlock Text="Manage" HorizontalAlignment="Center" FontSize="16" FontFamily="Bahnschrift" VerticalAlignment="Center" Margin="10,0,0,0"/>
+                </StackPanel>
+            </Button>
+            <Button x:Name="exitBtn_Copy4" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Left" Margin="58,18,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="28" Height="28" Click="exitEvent">
+                <Button.Background>
+                    <ImageBrush ImageSource="/View/user.png" TileMode="None" Stretch="UniformToFill" Opacity="0.5"/>
+                </Button.Background>
+            </Button>
+            <Button x:Name="logoutBtn" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Left" Margin="204,18,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="28" Height="28" Click="logoutAction">
+                <Button.Background>
+                    <ImageBrush ImageSource="/View/exit.png" TileMode="None" Stretch="UniformToFill" Opacity="0.7"/>
+                </Button.Background>
+            </Button>
+            <Button Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Left" Margin="753,287,0,0" VerticalAlignment="Top" Height="245" Width="76" Padding="0,0,0,0" Background="{x:Null}" BorderThickness="3,3,3,3" BorderBrush="#FFEFEFEF" Foreground="#FFAFAFAF">
+                <StackPanel Orientation="Horizontal">
+                    <Image Height="20" Width="29" Source="/View/time-past.png" Opacity="0.3" VerticalAlignment="Center"/>
+                    <!--<TextBlock Text="Manage" HorizontalAlignment="Center" FontSize="16" FontFamily="Bahnschrift" VerticalAlignment="Center" Margin="10,0,0,0"/>-->
+                </StackPanel>
+            </Button>
+
+
+
+
+        </Grid>
+
 
 
     </Grid>

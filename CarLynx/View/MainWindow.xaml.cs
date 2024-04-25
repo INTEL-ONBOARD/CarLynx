@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using CarLynx.Control;
+
 namespace CarLynx
 {
     /// <summary>
@@ -20,6 +22,7 @@ namespace CarLynx
     /// </summary>
     public partial class MainWindow : Window
     {
+
         public MainWindow()
         {
             InitializeComponent();
@@ -32,7 +35,25 @@ namespace CarLynx
 
         private void loginAction(object sender, RoutedEventArgs e)
         {
+            login_process ps = new login_process();
+            if (uname.Text != "" && pwd.Text != "")
+            {
+                if (ps.login_check(uname.Text, pwd.Text)) {
+                    login_window.Visibility = Visibility.Hidden;
+                    home_default_admin.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    login_window.Visibility = Visibility.Visible;
+                    home_default_admin.Visibility = Visibility.Hidden;
+                }
+            }
+        }
 
+        private void logoutAction(object sender, RoutedEventArgs e)
+        {
+            login_window.Visibility = Visibility.Visible;
+            home_default_admin.Visibility = Visibility.Hidden;
         }
     }
 }

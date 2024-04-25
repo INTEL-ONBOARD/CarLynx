@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("view/gmail.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("view/time-past.png")]
 
 
