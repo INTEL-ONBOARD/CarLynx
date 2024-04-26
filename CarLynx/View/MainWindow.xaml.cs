@@ -29,6 +29,8 @@ namespace CarLynx
             InitializeComponent();
         }
 
+
+
         private void exitEvent(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -62,13 +64,9 @@ namespace CarLynx
             store_view.Visibility = Visibility.Visible;
             home_default_admin.Visibility = Visibility.Hidden;
             itemView.Content = panelView;
-            for (int i=0; i < 5; i++)
-            {
-                car_product car = new car_product();
-                panelView.Children.Add(car);
-            }
-
-
+            stock_handler handler = new stock_handler();
+            panelView.Children.Clear();
+            handler.stock_view(panelView);
 
         }
 

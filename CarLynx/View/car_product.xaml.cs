@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CarLynx.Control;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,8 +24,44 @@ namespace CarLynx.View
         public car_product()
         {
             InitializeComponent();
+            this.DataContext = this;
+            
         }
 
+        public String car_id { get; set; }
+        public String Company { get; set; }
+        public String model { get; set; }
+        public String info { get; set; }
+        public String price { get; set; }
+        public String range { get; set; }
+        public String speed { get; set; }
+        public String mph { get; set; }
+        public String year { get; set; }
+
+        public void ChangeImageSource_car(string imagePath)
+        {
+            // Create a new BitmapImage with the provided image path
+            BitmapImage bitmap = new BitmapImage();
+            bitmap.BeginInit();
+            bitmap.UriSource = new Uri(imagePath, UriKind.RelativeOrAbsolute);
+            bitmap.CacheOption = BitmapCacheOption.OnLoad;
+            bitmap.EndInit();
+
+            // Set the BitmapImage as the source of the Image control
+            this.car_img.Source = bitmap;
+        }
+        public void ChangeImageSource_logo(string imagePath)
+        {
+            // Create a new BitmapImage with the provided image path
+            BitmapImage bitmap = new BitmapImage();
+            bitmap.BeginInit();
+            bitmap.UriSource = new Uri(imagePath, UriKind.RelativeOrAbsolute);
+            bitmap.CacheOption = BitmapCacheOption.OnLoad;
+            bitmap.EndInit();
+
+            // Set the BitmapImage as the source of the Image control
+            this.logo.Source = bitmap;
+        }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 

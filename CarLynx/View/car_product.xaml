@@ -62,16 +62,17 @@
             <SolidColorBrush Color="#FF9E9E9E" Opacity="0.2"/>
         </Border.BorderBrush>
         <Grid VerticalAlignment="Center" HorizontalAlignment="Center" Height="379" Width="777">
-            <Label Content="TESLA" Margin="106,314,0,0" FontSize="20" Foreground="#FF828282" VerticalAlignment="Top" HorizontalAlignment="Left" />
-            <Label Content="Model S" Margin="104,281,0,0" Foreground="#FF676767" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" />
-            <Button Style="{StaticResource btncutsomstyle}" Cursor="Hand" Content="View" HorizontalAlignment="Left" Margin="635,314,0,0" VerticalAlignment="Top" Height="32" Width="85" Background="{x:Null}" BorderBrush="#FF797676" Click="Button_Click_1"/>
-            <Image HorizontalAlignment="Left" Height="276" Margin="19,17,0,0" VerticalAlignment="Top" Width="387" Source="/View/model_1.jpg"/>
-            <Image HorizontalAlignment="Left" Height="57" Margin="19,296,0,0" VerticalAlignment="Top" Width="63" Source="/View/tesla_logo.png"/>
+            <Label Content="{Binding Company}" Margin="103,285,0,0" FontSize="16" Foreground="#FF828282" VerticalAlignment="Top" HorizontalAlignment="Left" />
+            <Label Content="{Binding model}" Margin="103,300,0,0" Foreground="#FF676767" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" />
+            <Label Content="{Binding year}" Margin="105,332,0,0" Foreground="#FF676767" HorizontalAlignment="Left" VerticalAlignment="Top" />
+            <Button Style="{StaticResource btncutsomstyle}" Cursor="Hand" Content="Purchase" HorizontalAlignment="Left" Margin="635,314,0,0" VerticalAlignment="Top" Height="32" Width="85" Background="{x:Null}" BorderBrush="#FF797676" Click="Button_Click_1"/>
+            <Image x:Name="car_img" HorizontalAlignment="Left" Height="276" Margin="19,17,0,0" VerticalAlignment="Top" Width="387" Source="/View/model_1.jpg"/>
+            <Image x:Name="logo" HorizontalAlignment="Left" Height="57" Margin="19,296,0,0" VerticalAlignment="Top" Width="63" Source="/View/tesla_logo.png"/>
             <Border BorderThickness="3,0,0,0" Margin="435,38,39,140">
                 <Border.BorderBrush>
                     <SolidColorBrush Color="Black" Opacity="0.4"/>
                 </Border.BorderBrush>
-                <TextBlock HorizontalAlignment="Left" Margin="15,33,0,0" TextWrapping="Wrap" Text="The Tesla Model S is an all-electric luxury sedan celebrated for its advanced technology, high performance, and stylish design. It offers a spacious and minimalist interior with a large touchscreen interface. With rapid acceleration, long-range capability, and cutting-edge autopilot features, the Model S delivers an exciting yet eco-friendly driving experience. Its sleek exterior design makes it a standout choice for those seeking innovation and sustainability in their vehicle." VerticalAlignment="Top" Height="143" Width="264" FontSize="10">
+                <TextBlock HorizontalAlignment="Left" Margin="15,33,0,0" TextWrapping="Wrap" Text="{Binding info}" VerticalAlignment="Top" Height="143" Width="264" FontSize="10">
                     <TextBlock.Foreground>
                         <SolidColorBrush Color="Black" Opacity="0.6"/>
                     </TextBlock.Foreground>
@@ -80,7 +81,7 @@
 
             <Border BorderBrush="#FFF31A37" Margin="363,294,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="3,0,3,0" Height="44">
                 <StackPanel Height="64" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <Label Content="149 mph" FontSize="16" FontWeight="Bold" Foreground="#FF6B6B6B" HorizontalContentAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0"/>
+                    <Label Content="{Binding speed}" FontSize="16" FontWeight="Bold" Foreground="#FF6B6B6B" HorizontalContentAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0"/>
                     <Label Content="Top Speed" RenderTransformOrigin="0.5,0.552" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,-10,0,-0.9">
                         <Label.Foreground>
                             <SolidColorBrush Color="Black" Opacity="0.7"/>
@@ -90,7 +91,7 @@
             </Border>
             <Border BorderBrush="#FFF31A37" Margin="469,294,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="44">
                 <StackPanel Height="64" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <Label Content="3.8sec" FontSize="16" FontWeight="Bold" Foreground="#FF6B6B6B" HorizontalContentAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0"/>
+                    <Label Content="{Binding mph}" FontSize="16" FontWeight="Bold" Foreground="#FF6B6B6B" HorizontalContentAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0"/>
                     <Label Content="0-60 mph " RenderTransformOrigin="0.5,0.552" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,-10,0,-0.9">
                         <Label.Foreground>
                             <SolidColorBrush Color="Black" Opacity="0.7"/>
@@ -99,17 +100,18 @@
                 </StackPanel>
             </Border>
 
-            <Label Content="$ 36500" Margin="435,276,0,0" FontSize="20" Foreground="#FF101010" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontWeight="Bold" Width="285" />
+            <Label Content="{Binding price}" Margin="435,276,0,0" FontSize="20" Foreground="#FF101010" VerticalAlignment="Top" HorizontalAlignment="Left" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontWeight="Bold" Width="285" />
             <Border BorderBrush="#FFF31A37" Margin="255,294,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="44">
                 <StackPanel Height="64" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <Label Content="330 KM" FontSize="16" FontWeight="Bold" Foreground="#FF6B6B6B" HorizontalContentAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0"/>
-                    <Label Content="Range (EPA est.)" RenderTransformOrigin="0.5,0.552" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,-10,0,-0.9">
+                    <Label Content="{Binding range}" FontSize="16" FontWeight="Bold" Foreground="#FF6B6B6B" HorizontalContentAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0"/>
+                    <Label Content="Range (Miles)" RenderTransformOrigin="0.5,0.552" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,-10,0,-0.9">
                         <Label.Foreground>
                             <SolidColorBrush Color="Black" Opacity="0.7"/>
                         </Label.Foreground>
                     </Label>
                 </StackPanel>
             </Border>
+            
 
 
 

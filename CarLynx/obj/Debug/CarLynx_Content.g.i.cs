@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("view/tesla_logo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("view/bg.mov")]
 
 
