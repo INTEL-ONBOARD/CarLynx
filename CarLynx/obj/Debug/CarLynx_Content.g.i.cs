@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("view/bg.mov")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("view/error-404.png")]
 
 

@@ -37,6 +37,7 @@ namespace CarLynx.View
         public String speed { get; set; }
         public String mph { get; set; }
         public String year { get; set; }
+        public String status { get; set; }
 
         public void ChangeImageSource_car(string imagePath)
         {

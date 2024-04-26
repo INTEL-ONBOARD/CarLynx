@@ -111,7 +111,14 @@
                     </Label>
                 </StackPanel>
             </Border>
-            
+            <Label Content="{Binding status}" HorizontalAlignment="Right" Margin="0,255,57,0" VerticalAlignment="Top" Background="{x:Null}" HorizontalContentAlignment="Right" VerticalContentAlignment="Bottom">
+                <Label.Foreground>
+                    <SolidColorBrush Color="#FF0B9A42" Opacity="0.8"/>
+                </Label.Foreground>
+            </Label>
+
+
+
 
 
 

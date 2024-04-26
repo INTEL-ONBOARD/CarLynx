@@ -47,6 +47,9 @@ namespace CarLynx
                 }
                 else
                 {
+                    uname.BorderBrush = Brushes.Red;
+                    pwd.BorderBrush = Brushes.Red;
+                    error_box.Visibility = Visibility.Visible;
                     login_window.Visibility = Visibility.Visible;
                     home_default_admin.Visibility = Visibility.Hidden;
                 }
@@ -68,6 +71,11 @@ namespace CarLynx
             panelView.Children.Clear();
             handler.stock_view(panelView);
 
+            //SetBinding defauult filter propertiers
+            manufacture_type.SelectedIndex = 0;
+            vehicle_type.SelectedIndex = 0;
+
+
         }
 
         private void backEvent(object sender, RoutedEventArgs e)
@@ -76,5 +84,41 @@ namespace CarLynx
             home_default_admin.Visibility= Visibility.Visible;
             
         }
+
+        private void recheck(object sender, TextChangedEventArgs e)
+        {
+            uname.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFD2D2D2"));
+            pwd.BorderBrush = new SolidColorBrush((Color)ColorConverter.ConvertFromString("#FFD2D2D2"));
+            error_box.Visibility = Visibility.Hidden;
+        }
+
+        private void filterCarAction(object sender, RoutedEventArgs e)
+        {
+            String man_type = manufacture_type.Text;
+            String veh_type = vehicle_type.Text;
+            String saletag = "";
+            String stocktag = "";
+
+            itemView.Content = panelView;
+            stock_handler handler = new stock_handler();
+            panelView.Children.Clear();
+
+
+            if (issale.IsChecked == true){Console.WriteLine("yes");}else { Console.WriteLine("no"); }
+            if (isstock.IsChecked == true) { Console.WriteLine("yes"); } else { Console.WriteLine("no"); }
+
+            if (man_type != "All" && veh_type != "All") { handler.stock_view_filtered(this,panelView, "select * FROM car_stock WHERE company = '" + man_type + "' AND type = '"+veh_type+"'"); }
+            else if(man_type == "All" && veh_type == "All") { handler.stock_view_filtered(this,panelView, "select * FROM car_stock"); }
+            else if (man_type != "All" ) { handler.stock_view_filtered(this, panelView, "select * FROM car_stock WHERE company = '" + man_type + "'"); }
+            else if (veh_type != "All") { handler.stock_view_filtered(this,panelView, "select * FROM car_stock WHERE type = '" + veh_type + "'"); }
+            
+            else if (isstock.IsChecked == true) { handler.stock_view_filtered(this, panelView, "select * FROM car_stock WHERE availability ='1'"); }
+            //man_type != "All" && veh_type != "All" &&
+            //"select * FROM car_stock WHERE company = '" + man_type + "' AND type = '" + veh_type + "' AND availability = '" + "1" + "'"
+
+
+        }
+
+
     }
 }
