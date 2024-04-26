@@ -179,9 +179,5 @@
   <ItemGroup>
     <Resource Include="View\background.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="View\bg.gif" />
-    <Content Include="View\bg.mov" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
