@@ -436,7 +436,7 @@
 
 
         <!--THIS IS THE VIEW FOR LOGIN SCREEN-->
-        <Grid x:Name="login_window" Margin="71,74,71,54" Visibility="Hidden" Grid.RowSpan="2" >
+        <Grid x:Name="login_window" Margin="71,74,71,54" Visibility="Visible" Grid.RowSpan="2" >
             <Image HorizontalAlignment="Left" Height="509" Margin="302,0,0,0" VerticalAlignment="Center" Width="720" Source="/View/poster.png"/>
             <Grid x:Name="login_pane" Margin="29,22,691,54">
                 <!--<Button Style="{StaticResource RoundButtonStyle}" Content="Login" Margin="68,366,68,78" Background="{x:Null}" Cursor="Hand"/>-->
@@ -574,13 +574,13 @@
                     <ImageBrush ImageSource="/View/gear.png" TileMode="None" Stretch="UniformToFill" Opacity="0.5"/>
                 </Button.Background>
             </Button>
-            <Button Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Left" Margin="843,287,0,0" VerticalAlignment="Top" Height="65" Width="168" Padding="0,0,0,0" Background="{x:Null}" BorderThickness="3,3,3,3" BorderBrush="#FFEFEFEF" Foreground="#FFAFAFAF">
+            <Button x:Name="manageBtn" Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Left" Margin="843,287,0,0" VerticalAlignment="Top" Height="65" Width="168" Padding="0,0,0,0" Background="{x:Null}" BorderThickness="3,3,3,3" BorderBrush="#FFEFEFEF" Foreground="#FFAFAFAF" Click="manageView">
                 <StackPanel Orientation="Horizontal">
                     <Image Height="20" Width="29" Source="/View/boxes.png" Opacity="0.3" VerticalAlignment="Center"/>
                     <TextBlock Text="Manage" HorizontalAlignment="Center" FontSize="16" FontFamily="Bahnschrift" VerticalAlignment="Center" Margin="10,0,0,0"/>
                 </StackPanel>
             </Button>
-            <Button x:Name="exitBtn_Copy4" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Left" Margin="58,18,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="28" Height="28" Click="exitEvent">
+            <Button x:Name="profileBtn" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Left" Margin="58,18,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="28" Height="28" Click="viewProfileAction">
                 <Button.Background>
                     <ImageBrush ImageSource="/View/user.png" TileMode="None" Stretch="UniformToFill" Opacity="0.5"/>
                 </Button.Background>
@@ -599,7 +599,10 @@
 
         </Grid>
 
-        <Grid x:Name="store_view" Margin="44,52,36,25" Visibility="Visible" Grid.RowSpan="2">
+
+
+        <!--THIS IS THE VIEW FOR STORE SCREEN-->
+        <Grid x:Name="store_view" Margin="44,52,36,25" Visibility="Hidden" Grid.RowSpan="2">
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"></ColumnDefinition>
@@ -611,7 +614,7 @@
                 <Border.BorderBrush>
                     <SolidColorBrush Color="Black" Opacity="0.1"/>
                 </Border.BorderBrush>
-                <Grid >
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" >
                     <!--content here-->
 
                     <ComboBox 
@@ -774,7 +777,7 @@
 
 
             </Border>
-            <Button x:Name="filterBtn" Style="{StaticResource btncutsomstyle}" Cursor="Hand" Grid.Column="1" Content="Filter" HorizontalAlignment="Right" Margin="0,319,10,0" VerticalAlignment="Top" Height="45" Width="240" BorderBrush="#FF7D7D7D" Background="{x:Null}" Foreground="#FF7D7D7D" FontFamily="Bahnschrift" FontSize="16" RenderTransformOrigin="15.546,3.778" Click="filterCarAction"/>
+            <Button x:Name="filterBtn" Style="{StaticResource btncutsomstyle}" Cursor="Hand" Content="Filter" HorizontalAlignment="Right" Margin="0,430,10,0" VerticalAlignment="Top" Height="45" Width="240" BorderBrush="#FF7D7D7D" Background="{x:Null}" Foreground="#FF7D7D7D" FontFamily="Bahnschrift" FontSize="16" RenderTransformOrigin="15.546,3.778" Click="filterCarAction" Grid.Column="1"/>
             <Button x:Name="backBtn" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Left" Margin="22,22,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="28" Height="28" Click="backEvent">
                 <Button.Background>
                     <ImageBrush ImageSource="/View/caret-square-left.png" TileMode="None" Stretch="UniformToFill" Opacity="0.5"/>
@@ -802,6 +805,62 @@
 
 
 
+
+        <!--THIS IS THE VIEW FOR USER PROFILE SCREEN-->
+        <Grid x:Name="profile_view" Margin="44,52,36,25" Grid.RowSpan="2" Visibility="Hidden">
+
+            <Grid.Background>
+                <SolidColorBrush/>
+            </Grid.Background>
+            <Button x:Name="backBtn_profile" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Left" Margin="22,22,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="28" Height="28" Click="backEvent_profile">
+                <Button.Background>
+                    <ImageBrush ImageSource="/View/caret-square-left.png" TileMode="None" Stretch="UniformToFill" Opacity="0.5"/>
+                </Button.Background>
+            </Button>
+            <Label Content="Back to Home" HorizontalAlignment="Left" Margin="55,23,0,0" VerticalAlignment="Top"/>
+            <Label Content="Update patch 3.1 : Todo :Profile components goes here" HorizontalAlignment="Center" Margin="0,312,0,0" VerticalAlignment="Top"/>
+
+
+
+
+        </Grid>
+        
+        
+        <!--THIS IS THE VIEW FOR USER Manage SCREEN-->
+        <Grid x:Name="manage_view" Margin="44,52,36,25" Grid.RowSpan="2" Visibility="Hidden">
+
+            <Grid.Background>
+                <SolidColorBrush/>
+            </Grid.Background>
+            <Button x:Name="backBtn_manage" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Left" Margin="22,22,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="28" Height="28" Click="backEvent_manage">
+                <Button.Background>
+                    <ImageBrush ImageSource="/View/caret-square-left.png" TileMode="None" Stretch="UniformToFill" Opacity="0.5"/>
+                </Button.Background>
+            </Button>
+            <Label Content="Back to Home" HorizontalAlignment="Left" Margin="55,23,0,0" VerticalAlignment="Top"/>
+            <Label Content="Update patch 3.1 : Todo :Manage components goes here" HorizontalAlignment="Center" Margin="0,312,0,0" VerticalAlignment="Top"/>
+
+
+        </Grid>
+
+        
+        <!--nacked fre panel-->
+        <!--THIS IS THE VIEW FOR USER Manage SCREEN--><!--
+        <Grid x:Name="manage_view" Margin="44,52,36,25" Grid.RowSpan="2" Visibility="Hidden">
+
+            <Grid.Background>
+                <SolidColorBrush/>
+            </Grid.Background>
+            <Button x:Name="backBtn_manage" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Left" Margin="22,22,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="28" Height="28" Click="backEvent_manage">
+                <Button.Background>
+                    <ImageBrush ImageSource="/View/caret-square-left.png" TileMode="None" Stretch="UniformToFill" Opacity="0.5"/>
+                </Button.Background>
+            </Button>
+            <Label Content="Back to Home" HorizontalAlignment="Left" Margin="55,23,0,0" VerticalAlignment="Top"/>
+            <Label Content="Update patch 3.1 : Todo :Manage components goes here" HorizontalAlignment="Center" Margin="0,312,0,0" VerticalAlignment="Top"/>
+
+
+        </Grid>-->
 
     </Grid>
 </Window>

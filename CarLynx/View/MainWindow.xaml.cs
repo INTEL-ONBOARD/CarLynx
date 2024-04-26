@@ -119,6 +119,28 @@ namespace CarLynx
 
         }
 
+        private void viewProfileAction(object sender, RoutedEventArgs e)
+        {
+            home_default_admin.Visibility = Visibility.Hidden;
+            profile_view.Visibility = Visibility.Visible;
+        }
 
+        private void backEvent_profile(object sender, RoutedEventArgs e)
+        {
+            home_default_admin.Visibility = Visibility.Visible;
+            profile_view.Visibility = Visibility.Hidden;
+        }
+
+        private void manageView(object sender, RoutedEventArgs e)
+        {
+            home_default_admin.Visibility = Visibility.Hidden;
+            manage_view.Visibility = Visibility.Visible;
+        }
+
+        private void backEvent_manage(object sender, RoutedEventArgs e)
+        {
+            home_default_admin.Visibility = Visibility.Visible;
+            manage_view.Visibility = Visibility.Hidden;
+        }
     }
 }
