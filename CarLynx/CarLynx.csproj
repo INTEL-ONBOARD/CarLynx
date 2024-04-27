@@ -185,5 +185,14 @@
   <ItemGroup>
     <Resource Include="View\HOME_BG_3.PNG" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\boxes_.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\tag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\user-gear.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -142,5 +142,26 @@ namespace CarLynx
             home_default_admin.Visibility = Visibility.Visible;
             manage_view.Visibility = Visibility.Hidden;
         }
+
+        private void gotocatAction(object sender, RoutedEventArgs e)
+        {
+            manage_category_view.Visibility = Visibility.Visible;
+            manage_car_stock_view.Visibility = Visibility.Hidden;
+            manage_user_view.Visibility = Visibility.Hidden;
+        }
+
+        private void gotostockAction(object sender, RoutedEventArgs e)
+        {
+            manage_category_view.Visibility = Visibility.Hidden;
+            manage_car_stock_view.Visibility = Visibility.Visible;
+            manage_user_view.Visibility = Visibility.Hidden;
+        }
+
+        private void gotousersAction(object sender, RoutedEventArgs e)
+        {
+            manage_category_view.Visibility = Visibility.Hidden;
+            manage_car_stock_view.Visibility = Visibility.Hidden;
+            manage_user_view.Visibility = Visibility.Visible;
+        }
     }
 }

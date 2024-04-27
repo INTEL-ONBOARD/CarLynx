@@ -258,6 +258,52 @@
         </Style>
 
 
+        <Style TargetType="Button" x:Key="btncutsomstyle_nav">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" CornerRadius="0" Background="{TemplateBinding Background}"
+                             BorderBrush="{TemplateBinding BorderBrush}"
+                             RenderTransformOrigin="0.5,0.5" BorderThickness="0,0,0,3">
+                            <Border.RenderTransform>
+                                <ScaleTransform ScaleX="1" ScaleY="1"/>
+                            </Border.RenderTransform>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="BorderBrush" Value="#FFEAEAEA"/>
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                      Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                      To="0.9" Duration="0:0:0.2"/>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                      Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                      To="0.9" Duration="0:0:0.2"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                      Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                      To="1" Duration="0:0:0.1"/>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                      Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                      To="1" Duration="0:0:0.1"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
 
         <Style x:Key="ComboBoxToggleButton" TargetType="ToggleButton">
             <Setter Property="Template">
@@ -535,9 +581,9 @@
 
 
         <!--THIS IS THE VIEW FOR HOME SCREEN-->
-        <Grid x:Name="home_default_admin" Margin="44,52,36,25" Visibility="Visible" Grid.RowSpan="2">
+        <Grid x:Name="home_default_admin" Margin="44,52,36,25" Visibility="Hidden" Grid.RowSpan="2">
             <Grid.Background>
-                <ImageBrush ImageSource="/View/HOME_BG_3.PNG" Stretch="Uniform"/>
+                <ImageBrush ImageSource="/View/HOME_BG_2.png" Stretch="Uniform"/>
             </Grid.Background>
 
             <!--button for store view-->
@@ -812,7 +858,7 @@
             <Grid.Background>
                 <SolidColorBrush/>
             </Grid.Background>
-            <Button x:Name="backBtn_profile" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Left" Margin="22,22,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="28" Height="28" Click="backEvent_profile">
+            <Button x:Name="backBtn_profile" Style="{StaticResource btncutsomstyle}" Content="" HorizontalAlignment="Left" Margin="22,22,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="28" Height="28" Click="backEvent_profile">
                 <Button.Background>
                     <ImageBrush ImageSource="/View/caret-square-left.png" TileMode="None" Stretch="UniformToFill" Opacity="0.5"/>
                 </Button.Background>
@@ -824,28 +870,130 @@
 
 
         </Grid>
-        
-        
+
+
         <!--THIS IS THE VIEW FOR Manage SCREEN-->
-        <Grid x:Name="manage_view" Margin="44,52,36,25" Grid.RowSpan="2" Visibility="Hidden">
+        <Grid x:Name="manage_view" Margin="44,52,36,10" Grid.RowSpan="2" Visibility="Visible">
 
             <Grid.Background>
                 <SolidColorBrush/>
             </Grid.Background>
+
+
+
+            <!--back button config-->
             <Button x:Name="backBtn_manage" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Left" Margin="22,22,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="28" Height="28" Click="backEvent_manage">
                 <Button.Background>
                     <ImageBrush ImageSource="/View/caret-square-left.png" TileMode="None" Stretch="UniformToFill" Opacity="0.5"/>
                 </Button.Background>
             </Button>
             <Label Content="Back to Home" HorizontalAlignment="Left" Margin="55,23,0,0" VerticalAlignment="Top"/>
-            <Label Content="Update patch 3.1 : Todo :Manage components goes here" HorizontalAlignment="Center" Margin="0,312,0,0" VerticalAlignment="Top"/>
+
+
+
+
+            <!--nav button config-->
+            <Button x:Name="stockBtn" Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Left" VerticalAlignment="Top" Height="58" Width="72" Margin="25,276,0,0" Background="{x:Null}" FontSize="18" Padding="1,1,1,15" Click="gotostockAction">
+                <Button.BorderBrush>
+                    <SolidColorBrush Color="#FF707070" Opacity="0.4"/>
+                </Button.BorderBrush>
+                <Button.Foreground>
+                    <SolidColorBrush Color="Black" Opacity="0.7"/>
+                </Button.Foreground>
+                <Image Height="29" Width="53" Source="/View/boxes_.png" RenderTransformOrigin="1.651,11.069" Opacity="0.6" ToolTip="Manage Stock"/>
+            </Button>
+            <Button x:Name="categoryBtn" Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Left" VerticalAlignment="Top" Height="58" Width="72" Margin="25,169,0,0" Background="{x:Null}" FontSize="18" Padding="1,1,1,15" ToolTip="Category" Click="gotocatAction">
+                <Button.BorderBrush>
+                    <SolidColorBrush Color="#FF707070" Opacity="0.405"/>
+                </Button.BorderBrush>
+                <Button.Foreground>
+                    <SolidColorBrush Color="Black" Opacity="0.7"/>
+                </Button.Foreground>
+                <Image Height="29" Width="53" Source="/View/tag.png" RenderTransformOrigin="1.651,11.069" Opacity="0.6" ToolTip="Manage Category"/>
+            </Button>
+            <Button x:Name="usersBtn" Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Left" VerticalAlignment="Top" Height="58" Width="72" Margin="25,378,0,0" Background="{x:Null}" FontSize="18" Padding="1,1,1,15" Click="gotousersAction">
+                <Button.BorderBrush>
+                    <SolidColorBrush Color="#FF707070" Opacity="0.4"/>
+                </Button.BorderBrush>
+                <Button.Foreground>
+                    <SolidColorBrush Color="Black" Opacity="0.7"/>
+                </Button.Foreground>
+                <Image Height="29" Width="53" Source="/View/user-gear.png" RenderTransformOrigin="1.651,11.069" Opacity="0.605" ToolTip="Manage Users"/>
+            </Button>
+
+            <Label Content="Car stock" HorizontalAlignment="Left" Margin="32,335,0,0" VerticalAlignment="Top">
+                <Label.Foreground>
+                    <SolidColorBrush Color="Black" Opacity="0.6"/>
+                </Label.Foreground>
+                <Label.Background>
+                    <SolidColorBrush Opacity="0.265"/>
+                </Label.Background>
+            </Label>
+            <Label Content="Category" HorizontalAlignment="Left" Margin="32,227,0,0" VerticalAlignment="Top">
+                <Label.Foreground>
+                    <SolidColorBrush Color="Black" Opacity="0.6"/>
+                </Label.Foreground>
+                <Label.Background>
+                    <SolidColorBrush Opacity="0.265"/>
+                </Label.Background>
+            </Label>
+            <Label Content="Users" HorizontalAlignment="Left" Margin="42,437,0,0" VerticalAlignment="Top">
+                <Label.Foreground>
+                    <SolidColorBrush Color="Black" Opacity="0.6"/>
+                </Label.Foreground>
+                <Label.Background>
+                    <SolidColorBrush Opacity="0.265"/>
+                </Label.Background>
+            </Label>
+
+
+
+            <Grid x:Name="manage_category_view" Margin="114,55,10,28" Background="#FFF9A9A9">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="135*"/>
+
+                </Grid.ColumnDefinitions>
+                <Label Content="Manage category section" HorizontalAlignment="Left" Margin="445,277,0,0" VerticalAlignment="Top" Width="122" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.3"/>
+                    </Label.Foreground>
+                </Label>
+
+            </Grid>
+
+            <Grid x:Name="manage_car_stock_view" Margin="114,55,10,28" Background="#FFBEF9A9">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="135*"/>
+
+                </Grid.ColumnDefinitions>
+                <Label Content="Manage car stock section" HorizontalAlignment="Left" Margin="416,271,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.3"/>
+                    </Label.Foreground>
+                </Label>
+
+            </Grid>
+
+            <Grid x:Name="manage_user_view" Margin="114,55,10,28" Background="#FFF9CAA9">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="135*"/>
+
+                </Grid.ColumnDefinitions>
+                <Label Content="Manage user section" HorizontalAlignment="Left" Margin="448,277,0,0" VerticalAlignment="Top">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.3"/>
+                    </Label.Foreground>
+                </Label>
+
+            </Grid>
 
 
         </Grid>
 
-        
+
         <!--nacked fre panel-->
-        <!--THIS IS THE VIEW FOR USER Manage SCREEN--><!--
+        <!--THIS IS THE VIEW FOR USER Manage SCREEN-->
+        <!--
         <Grid x:Name="manage_view" Margin="44,52,36,25" Grid.RowSpan="2" Visibility="Hidden">
 
             <Grid.Background>
