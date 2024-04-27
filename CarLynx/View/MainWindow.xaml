@@ -1042,7 +1042,7 @@
                     </Label.Background>
                 </Label>
                 <TextBox x:Name="Model_name_selector" Style="{StaticResource CustomTextBoxStyle}" Margin="440,371,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
-                <TextBox x:Name="Model_info_selector" Style="{StaticResource CustomTextBoxStyle}" Margin="703,116,0,0" TextWrapping="Wrap" Tag="" Width="263" Height="295" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
+                <TextBox x:Name="Model_info_selector" Style="{StaticResource CustomTextBoxStyle}" Margin="703,116,0,0" TextWrapping="Wrap" Tag="" Width="263" Height="217" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
                 <Label Content="Vehicle Description" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="838,85,0,0">
                     <Label.Foreground>
                         <SolidColorBrush Color="Black" Opacity="0.6"/>
@@ -1062,6 +1062,19 @@
                 <TextBox x:Name="price_selector" Style="{StaticResource CustomTextBoxStyle}" Margin="578,456,0,0" TextWrapping="Wrap" Tag="" Width="389" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
 
                 <Button Content="Add" Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="440,456,0,0" VerticalAlignment="Top" Height="40" Width="126" Background="{x:Null}"/>
+                <Label Content="Vehicle Model" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="877,341,0,0">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.6"/>
+                    </Label.Foreground>
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.445"/>
+                    </Label.Background>
+                </Label>
+                <Button Content="Upload Image" Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="696,371,0,0" VerticalAlignment="Top" Height="40" Width="266" BorderBrush="{x:Null}">
+                    <Button.Background>
+                        <SolidColorBrush Color="#FFDEDEDE" Opacity="0.4"/>
+                    </Button.Background>
+                </Button>
 
 
 
