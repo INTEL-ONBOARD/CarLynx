@@ -963,11 +963,11 @@
                     <ColumnDefinition Width="135*"/>
 
                 </Grid.ColumnDefinitions>
-                <Label Content="Car Stock" HorizontalAlignment="Left" Margin="904,49,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift Light"/>
-                <Label Content="MANAGE" HorizontalAlignment="Left" Margin="866,22,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift Light" FontSize="24"/>
+                <Label Content="Car Stock" HorizontalAlignment="Left" Margin="904,12,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift Light"/>
+                <Label Content="MANAGE" HorizontalAlignment="Left" Margin="866,-15,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift Light" FontSize="24"/>
 
 
-                <Label Content="Vehicle manufacture" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="556,96,0,0">
+                <Label Content="Vehicle manufacture" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,106,0,0">
                     <Label.Foreground>
                         <SolidColorBrush Color="Black" Opacity="0.6"/>
                     </Label.Foreground>
@@ -983,7 +983,7 @@
                         Padding="15,5,15,5"
                         HorizontalContentAlignment="Center"
                         VerticalAlignment="Top"
-                        ItemContainerStyle="{DynamicResource theComboBoxItem}" Height="40" VerticalContentAlignment="Center" Margin="0,126,300,0" HorizontalAlignment="Right" Width="242" Foreground="Black" BorderBrush="#FF0C0000" Background="#FFECECEC">
+                        ItemContainerStyle="{DynamicResource theComboBoxItem}" Height="40" VerticalContentAlignment="Center" Margin="0,136,380,0" HorizontalAlignment="Right" Width="242" Foreground="Black" BorderBrush="#FF0C0000" Background="#FFECECEC">
                     <ComboBoxItem>All</ComboBoxItem>
                     <ComboBoxItem>TOYOTA</ComboBoxItem>
                     <ComboBoxItem>BMW</ComboBoxItem>
@@ -996,7 +996,7 @@
                 </ComboBox>
 
 
-                <Label Content="Vehicle Type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="598,175,0,0">
+                <Label Content="Vehicle Type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,106,0,0">
                     <Label.Foreground>
                         <SolidColorBrush Color="Black" Opacity="0.6"/>
                     </Label.Foreground>
@@ -1011,7 +1011,7 @@
                     Padding="15,5,15,5"
                     HorizontalContentAlignment="Center"
                     VerticalAlignment="Top"
-                    ItemContainerStyle="{DynamicResource theComboBoxItem}" Height="40" VerticalContentAlignment="Center" Margin="0,205,300,0" HorizontalAlignment="Right" Width="242" Foreground="Black" BorderBrush="#FF0C0000" Background="#FFECECEC">
+                    ItemContainerStyle="{DynamicResource theComboBoxItem}" Height="40" VerticalContentAlignment="Center" Margin="0,136,678,0" HorizontalAlignment="Right" Width="242" Foreground="Black" BorderBrush="#FF0C0000" Background="#FFECECEC">
                     <ComboBoxItem Content="All"/>
                     <ComboBoxItem Content="SEDAN"/>
                     <ComboBoxItem Content="COUP"/>
@@ -1023,7 +1023,7 @@
                 </ComboBox>
 
 
-                <Label Content="Vehicle Model year" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="566,262,0,0">
+                <Label Content="Top speed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="534,272,0,0">
                     <Label.Foreground>
                         <SolidColorBrush Color="Black" Opacity="0.6"/>
                     </Label.Foreground>
@@ -1031,9 +1031,9 @@
                         <SolidColorBrush Opacity="0.445"/>
                     </Label.Background>
                 </Label>
-                <TextBox x:Name="Model_year_selector" Style="{StaticResource CustomTextBoxStyle}" Margin="440,293,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
+                <TextBox x:Name="Model_year_selector" Style="{StaticResource CustomTextBoxStyle}" Margin="360,303,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
 
-                <Label Content="Vehicle Model" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="592,341,0,0">
+                <Label Content="Mph" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="563,351,0,0">
                     <Label.Foreground>
                         <SolidColorBrush Color="Black" Opacity="0.6"/>
                     </Label.Foreground>
@@ -1041,9 +1041,9 @@
                         <SolidColorBrush Opacity="0.445"/>
                     </Label.Background>
                 </Label>
-                <TextBox x:Name="Model_name_selector" Style="{StaticResource CustomTextBoxStyle}" Margin="440,371,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
-                <TextBox x:Name="Model_info_selector" Style="{StaticResource CustomTextBoxStyle}" Margin="703,116,0,0" TextWrapping="Wrap" Tag="" Width="263" Height="217" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
-                <Label Content="Vehicle Description" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="838,85,0,0">
+                <TextBox x:Name="Model_name_selector" Style="{StaticResource CustomTextBoxStyle}" Margin="360,381,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
+                <TextBox x:Name="Model_info_selector" Style="{StaticResource CustomTextBoxStyle}" Margin="659,126,0,0" TextWrapping="Wrap" Tag="" Width="277" Height="295" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
+                <Label Content="Vehicle Description" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="808,95,0,0">
                     <Label.Foreground>
                         <SolidColorBrush Color="Black" Opacity="0.6"/>
                     </Label.Foreground>
@@ -1051,18 +1051,9 @@
                         <SolidColorBrush Opacity="0.445"/>
                     </Label.Background>
                 </Label>
-                <Label Content="Vehicle Selling price" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="847,426,0,0">
-                    <Label.Foreground>
-                        <SolidColorBrush Color="Black" Opacity="0.6"/>
-                    </Label.Foreground>
-                    <Label.Background>
-                        <SolidColorBrush Opacity="0.445"/>
-                    </Label.Background>
-                </Label>
-                <TextBox x:Name="price_selector" Style="{StaticResource CustomTextBoxStyle}" Margin="578,456,0,0" TextWrapping="Wrap" Tag="" Width="389" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
 
-                <Button Content="Add" Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="440,456,0,0" VerticalAlignment="Top" Height="40" Width="126" Background="{x:Null}"/>
-                <Label Content="Vehicle Model" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="877,341,0,0">
+                <Button Content="Add" Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="63,456,0,0" VerticalAlignment="Top" Height="40" Width="766" Background="{x:Null}" Click="Button_Click" Padding="30,30,30,30"/>
+                <Label Content="Range" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="550,189,0,0">
                     <Label.Foreground>
                         <SolidColorBrush Color="Black" Opacity="0.6"/>
                     </Label.Foreground>
@@ -1070,11 +1061,44 @@
                         <SolidColorBrush Opacity="0.445"/>
                     </Label.Background>
                 </Label>
-                <Button Content="Upload Image" Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="696,371,0,0" VerticalAlignment="Top" Height="40" Width="266" BorderBrush="{x:Null}">
-                    <Button.Background>
-                        <SolidColorBrush Color="#FFDEDEDE" Opacity="0.4"/>
-                    </Button.Background>
-                </Button>
+                <TextBox x:Name="Model_year_selector_Copy" Style="{StaticResource CustomTextBoxStyle}" Margin="360,217,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
+                <Label Content="Vehicle Model" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="215,189,0,0">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.6"/>
+                    </Label.Foreground>
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.445"/>
+                    </Label.Background>
+                </Label>
+                <TextBox x:Name="Model_name_selector_Copy" Style="{StaticResource CustomTextBoxStyle}" Margin="63,219,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
+                <Label Content="Vehicle Model year" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="189,272,0,0">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.6"/>
+                    </Label.Foreground>
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.445"/>
+                    </Label.Background>
+                </Label>
+                <TextBox x:Name="Model_year_selector_Copy1" Style="{StaticResource CustomTextBoxStyle}" Margin="63,303,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
+                <Label Content="Vehicle Price" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="223,351,0,0">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.6"/>
+                    </Label.Foreground>
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.445"/>
+                    </Label.Background>
+                </Label>
+                <TextBox x:Name="Model_name_selector_Copy1" Style="{StaticResource CustomTextBoxStyle}" Margin="63,381,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
+                <Button Content="Clear" Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="845,456,0,0" VerticalAlignment="Top" Height="40" Width="90" Background="#FFE2E2E2" Click="Button_Click" BorderBrush="#FFE2E2E2"/>
+                <Label Content="UPDATE STOCK" HorizontalAlignment="Left" Margin="63,41,0,0" VerticalAlignment="Top" Width="903" HorizontalContentAlignment="Right" Padding="5,5,10,5" Height="36" VerticalContentAlignment="Center">
+                    <Label.Background>
+                        <LinearGradientBrush EndPoint="2,1" StartPoint="0.5,0" SpreadMethod="Pad" MappingMode="RelativeToBoundingBox" Opacity="0.2">
+                            <GradientStop Color="Black" Offset="0.718"/>
+                            <GradientStop Color="White" Offset="0"/>
+                            <GradientStop Color="White" Offset="0"/>
+                        </LinearGradientBrush>
+                    </Label.Background>
+                </Label>
 
 
 
@@ -1092,6 +1116,7 @@
                 </Label>
 
             </Grid>
+            <Button Content="Switch to View mode" Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="155,102,0,0" VerticalAlignment="Top" Height="25" Width="146" Background="{x:Null}" Click="Button_Click" Padding="30,30,30,30"/>
 
 
         </Grid>
