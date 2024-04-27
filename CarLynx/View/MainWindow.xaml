@@ -436,7 +436,7 @@
 
 
         <!--THIS IS THE VIEW FOR LOGIN SCREEN-->
-        <Grid x:Name="login_window" Margin="71,74,71,54" Visibility="Visible" Grid.RowSpan="2" >
+        <Grid x:Name="login_window" Margin="71,74,71,54" Visibility="Hidden" Grid.RowSpan="2" >
             <Image HorizontalAlignment="Left" Height="509" Margin="302,0,0,0" VerticalAlignment="Center" Width="720" Source="/View/poster.png"/>
             <Grid x:Name="login_pane" Margin="29,22,691,54">
                 <!--<Button Style="{StaticResource RoundButtonStyle}" Content="Login" Margin="68,366,68,78" Background="{x:Null}" Cursor="Hand"/>-->
@@ -535,9 +535,9 @@
 
 
         <!--THIS IS THE VIEW FOR HOME SCREEN-->
-        <Grid x:Name="home_default_admin" Margin="44,52,36,25" Visibility="Hidden" Grid.RowSpan="2">
+        <Grid x:Name="home_default_admin" Margin="44,52,36,25" Visibility="Visible" Grid.RowSpan="2">
             <Grid.Background>
-                <ImageBrush Stretch="Uniform" ImageSource="/View/HOME_BG_2.png"/>
+                <ImageBrush ImageSource="/View/HOME_BG_3.PNG" Stretch="Uniform"/>
             </Grid.Background>
 
             <!--button for store view-->
@@ -826,7 +826,7 @@
         </Grid>
         
         
-        <!--THIS IS THE VIEW FOR USER Manage SCREEN-->
+        <!--THIS IS THE VIEW FOR Manage SCREEN-->
         <Grid x:Name="manage_view" Margin="44,52,36,25" Grid.RowSpan="2" Visibility="Hidden">
 
             <Grid.Background>

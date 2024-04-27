@@ -182,5 +182,8 @@
   <ItemGroup>
     <Resource Include="View\error-404.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\HOME_BG_3.PNG" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
