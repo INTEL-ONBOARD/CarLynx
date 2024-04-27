@@ -135,6 +135,10 @@ namespace CarLynx
         {
             home_default_admin.Visibility = Visibility.Hidden;
             manage_view.Visibility = Visibility.Visible;
+
+            manage_category_view.Visibility = Visibility.Hidden;
+            manage_car_stock_view.Visibility = Visibility.Visible;
+            manage_user_view.Visibility = Visibility.Hidden;
         }
 
         private void backEvent_manage(object sender, RoutedEventArgs e)
@@ -162,6 +166,11 @@ namespace CarLynx
             manage_category_view.Visibility = Visibility.Hidden;
             manage_car_stock_view.Visibility = Visibility.Hidden;
             manage_user_view.Visibility = Visibility.Visible;
+        }
+
+        private void manufacture_type_select_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }

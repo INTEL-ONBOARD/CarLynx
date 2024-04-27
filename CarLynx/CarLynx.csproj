@@ -194,5 +194,8 @@
   <ItemGroup>
     <Resource Include="View\user-gear.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\category.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
