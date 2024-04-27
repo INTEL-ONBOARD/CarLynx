@@ -967,7 +967,7 @@
                 <Label Content="MANAGE" HorizontalAlignment="Left" Margin="866,-15,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift Light" FontSize="24"/>
 
 
-                <Label Content="Vehicle manufacture" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,106,0,0">
+                <Label Content="Vehicle Manufacture" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,106,0,0">
                     <Label.Foreground>
                         <SolidColorBrush Color="Black" Opacity="0.6"/>
                     </Label.Foreground>
@@ -1023,7 +1023,7 @@
                 </ComboBox>
 
 
-                <Label Content="Top speed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="534,272,0,0">
+                <Label Content="Top Speed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="534,272,0,0">
                     <Label.Foreground>
                         <SolidColorBrush Color="Black" Opacity="0.6"/>
                     </Label.Foreground>
@@ -1100,6 +1100,8 @@
                     </Label.Background>
                 </Label>
 
+                <Button Content="Switch to View mode" Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="63,46,0,0" VerticalAlignment="Top" Height="26" Width="146" Background="{x:Null}" Click="Button_Click" Padding="30,30,30,30"/>
+
 
 
             </Grid>
@@ -1116,8 +1118,6 @@
                 </Label>
 
             </Grid>
-            <Button Content="Switch to View mode" Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="155,102,0,0" VerticalAlignment="Top" Height="25" Width="146" Background="{x:Null}" Click="Button_Click" Padding="30,30,30,30"/>
-
 
         </Grid>
 
