@@ -71,7 +71,8 @@ namespace CarLynx
             home_default_admin.Visibility = Visibility.Hidden;
             itemView.Content = panelView;
             panelView.Children.Clear();
-            handler.stock_view(panelView);
+
+            handler.stock_view(panelView,this);
 
             //SetBinding defauult filter propertiers
             manufacture_type.SelectedIndex = 0;
@@ -366,8 +367,20 @@ namespace CarLynx
                 }
             }
         }
-        private void get_stock_id()
+
+        private void backEvent_store(object sender, RoutedEventArgs e)
         {
+            
+            store_view.Visibility = Visibility.Visible;
+            purchase_view.Visibility = Visibility.Hidden;
+            itemView.Content = panelView;
+            panelView.Children.Clear();
+
+            handler.stock_view(panelView, this);
+
+            //SetBinding defauult filter propertiers
+            manufacture_type.SelectedIndex = 0;
+            vehicle_type.SelectedIndex = 0;
 
         }
     }

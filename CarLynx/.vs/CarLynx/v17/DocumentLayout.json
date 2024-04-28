@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|c:\\users\\wenuj\\source\\repos\\carlynx\\carlynx\\control\\stock_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:control\\stock_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|c:\\users\\wenuj\\source\\repos\\carlynx\\carlynx\\model\\dbhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:model\\dbhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|c:\\users\\wenuj\\source\\repos\\carlynx\\carlynx\\control\\stock_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:control\\stock_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|c:\\users\\wenuj\\source\\repos\\carlynx\\carlynx\\view\\car_product.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\car_product.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,27 +51,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Dbhandler.cs",
-              "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\Model\\Dbhandler.cs",
-              "RelativeDocumentMoniker": "Model\\Dbhandler.cs",
-              "ToolTip": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\Model\\Dbhandler.cs",
-              "RelativeToolTip": "Model\\Dbhandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHEAAAAqAAAA",
+              "Title": "car_product.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\car_product.xaml.cs",
+              "RelativeDocumentMoniker": "View\\car_product.xaml.cs",
+              "ToolTip": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\car_product.xaml.cs",
+              "RelativeToolTip": "View\\car_product.xaml.cs",
+              "ViewState": "AQIAACQAAAAAAAAAAIAxwFEAAAA8AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T16:04:22.797Z",
+              "WhenOpened": "2024-04-28T16:35:49.679Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "stock_handler.cs",
               "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\Control\\stock_handler.cs",
               "RelativeDocumentMoniker": "Control\\stock_handler.cs",
               "ToolTip": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\Control\\stock_handler.cs",
               "RelativeToolTip": "Control\\stock_handler.cs",
-              "ViewState": "AQIAACgAAAAAAAAAAAAmwGMAAAA8AAAA",
+              "ViewState": "AQIAADEAAAAAAAAAAAAmwEYAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-28T15:58:36.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\MainWindow.xaml.cs",
+              "RelativeToolTip": "View\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAFQBAAAAAAAAAAAxwHQBAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T10:30:43.373Z",
               "EditorCaption": ""
             },
             {
@@ -84,19 +97,6 @@
               "RelativeToolTip": "View\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-04-26T21:59:17.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "View\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\MainWindow.xaml.cs",
-              "RelativeToolTip": "View\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAHIBAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T10:30:43.373Z",
               "EditorCaption": ""
             }
           ]

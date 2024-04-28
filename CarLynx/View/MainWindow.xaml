@@ -526,7 +526,7 @@
 
 
         <!--THIS IS THE VIEW FOR LOGIN SCREEN-->
-        <Grid x:Name="login_window" Margin="71,74,71,54" Visibility="Visible" Grid.RowSpan="2" >
+        <Grid x:Name="login_window" Margin="71,74,71,54" Visibility="Hidden" Grid.RowSpan="2" >
             <Image HorizontalAlignment="Left" Height="509" Margin="302,0,0,0" VerticalAlignment="Center" Width="720" Source="/View/poster.png"/>
             <Grid x:Name="login_pane" Margin="29,22,691,54">
                 <!--<Button Style="{StaticResource RoundButtonStyle}" Content="Login" Margin="68,366,68,78" Background="{x:Null}" Cursor="Hand"/>-->
@@ -917,10 +917,266 @@
 
         </Grid>
 
+        <!--THIS IS THE VIEW FOR PURCHASE SCREEN-->
+        <Grid x:Name="purchase_view" Margin="44,52,36,25" Grid.RowSpan="2" Visibility="Visible">
+            <Grid.Background>
+                <SolidColorBrush Color="Black" Opacity="0.0"/>
+            </Grid.Background>
+
+            <!--back button config-->
+            <Button x:Name="backBtn_purchase" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Left" Margin="22,22,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="28" Height="28" Click="backEvent_store">
+                <Button.Background>
+                    <ImageBrush ImageSource="/View/caret-square-left.png" TileMode="None" Stretch="UniformToFill" Opacity="0.5"/>
+                </Button.Background>
+            </Button>
+            <Label Content="Back to Store" HorizontalAlignment="Left" Margin="55,23,0,0" VerticalAlignment="Top"/>
+            <Image x:Name="image_fill" HorizontalAlignment="Left" Height="408" Margin="448,116,0,0" VerticalAlignment="Top" Width="604" RenderTransformOrigin="0.5,0.5" Source="/View/717fd11df8a475d622e4774d7b8e972d.jpg" Stretch="UniformToFill">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.145"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+
+
+            <Grid x:Name="purchase_info1" Margin="36,63,654,37" Visibility="Visible">
+
+
+                <Image HorizontalAlignment="Left" Height="20" Margin="50,32,0,0" VerticalAlignment="Top" Width="20" Source="/View/moving-truck.png"/>
+                <Label Content="Buyer information" HorizontalAlignment="Left" Margin="74,25,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.8"/>
+                    </Label.Foreground>
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.8"/>
+                    </Label.Background>
+                </Label>
+
+                <Label Content="Mr.Athama Edirisingha" HorizontalAlignment="Left" Margin="68,63,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="14">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.6"/>
+                    </Label.Foreground>
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.6"/>
+                    </Label.Background>
+                </Label>
+                <Label Content="078 4563788" HorizontalAlignment="Left" Margin="68,89,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="14">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.6"/>
+                    </Label.Foreground>
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.6"/>
+                    </Label.Background>
+                </Label>
+                <Label Content="admin@gmail.com" HorizontalAlignment="Left" Margin="68,112,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="14">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.6"/>
+                    </Label.Foreground>
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.6"/>
+                    </Label.Background>
+                </Label>
+                <Label Content="No.21,Colombo-7,Rathmalana" HorizontalAlignment="Left" Margin="67,138,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="14">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.6"/>
+                    </Label.Foreground>
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.6"/>
+                    </Label.Background>
+                </Label>
+                <Rectangle HorizontalAlignment="Left" Height="110" Margin="56,59,0,0" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5">
+                    <Rectangle.Stroke>
+                        <SolidColorBrush Color="Black" Opacity="0.3"/>
+                    </Rectangle.Stroke>
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+
+
+
+                <Image HorizontalAlignment="Left" Height="20" Margin="50,202,0,0" VerticalAlignment="Top" Width="20" Source="/View/shopping-bag.png"/>
+                <Label Content="Purchase information" HorizontalAlignment="Left" Margin="75,196,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="16">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.8"/>
+                    </Label.Foreground>
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.8"/>
+                    </Label.Background>
+                </Label>
+                <Label Content="DAIHATSU TERIOUS" HorizontalAlignment="Left" Margin="68,236,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="14" HorizontalContentAlignment="Left">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.6"/>
+                    </Label.Foreground>
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.6"/>
+                    </Label.Background>
+                </Label>
+                <Label Content="2020" HorizontalAlignment="Left" Margin="67,255,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="14" HorizontalContentAlignment="Left">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.6"/>
+                    </Label.Foreground>
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.6"/>
+                    </Label.Background>
+                </Label>
+                <Label Content="TAX INCLUDED" HorizontalAlignment="Left" Margin="68,277,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="14" HorizontalContentAlignment="Left">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.6"/>
+                    </Label.Foreground>
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.6"/>
+                    </Label.Background>
+                </Label>
+                <Label Content="$ 19670" HorizontalAlignment="Left" Margin="67,301,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="24" HorizontalContentAlignment="Left" FontWeight="Bold">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.8"/>
+                    </Label.Foreground>
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.6"/>
+                    </Label.Background>
+                </Label>
+                <Rectangle HorizontalAlignment="Left" Height="110" Margin="56,234,0,0" VerticalAlignment="Top" Width="2" RenderTransformOrigin="0.5,0.5">
+                    <Rectangle.Stroke>
+                        <SolidColorBrush Color="Black" Opacity="0.3"/>
+                    </Rectangle.Stroke>
+                    <Rectangle.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleY="-1"/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="-180"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </Rectangle.RenderTransform>
+                </Rectangle>
+
+
+
+
+                <Button x:Name="usersBtn_" Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Left" VerticalAlignment="Top" Height="58" Width="164" Margin="30,372,0,0" Background="{x:Null}" FontSize="18" Padding="1,1,1,15" Click="gotousersAction">
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="#FF707070" Opacity="0.4"/>
+                    </Button.BorderBrush>
+                    <Button.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.7"/>
+                    </Button.Foreground>
+                    <Image Height="48" Width="172" Source="/View/google-pay.png" RenderTransformOrigin="1.651,11.069" Opacity="0.605" ToolTip="Manage Users"/>
+                </Button>
+                <Button x:Name="usersBtn__Copy" Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Left" VerticalAlignment="Top" Height="58" Width="175" Margin="210,372,0,0" Background="{x:Null}" FontSize="18" Padding="1,1,1,15" Click="gotousersAction">
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="#FF707070" Opacity="0.4"/>
+                    </Button.BorderBrush>
+                    <Button.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.7"/>
+                    </Button.Foreground>
+                    <Image Height="48" Width="172" Source="/View/apple-pay.png" RenderTransformOrigin="1.651,11.069" Opacity="0.605" ToolTip="Manage Users"/>
+                </Button>
+                <Button x:Name="usersBtn__Copy1" Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Top" Height="58" Width="354" Margin="0,444,0,0" Background="{x:Null}" FontSize="18" Padding="1,1,1,15" Click="gotousersAction">
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="#FF707070" Opacity="0.4"/>
+                    </Button.BorderBrush>
+                    <Button.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.7"/>
+                    </Button.Foreground>
+                    <Image Height="48" Width="343" Source="/View/visa.png" RenderTransformOrigin="1.651,11.069" Opacity="0.605" ToolTip="Manage Users"/>
+                </Button>
+
+
+
+
+            </Grid>
+
+
+
+
+
+
+
+            <Grid x:Name="purchase_info2" Margin="345,63,345,37" Visibility="Hidden">
+
+
+                <Image HorizontalAlignment="Left" Height="154" Margin="142,75,0,0" VerticalAlignment="Top" Width="165" Source="/View/bag.png"/>
+                <Label Content="Payment Success!" HorizontalAlignment="Center" Margin="0,246,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" FontWeight="Bold">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.8"/>
+                    </Label.Foreground>
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.8"/>
+                    </Label.Background>
+                </Label>
+
+                <Button x:Name="continue" Content="Continue purchasing" Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Top" Height="58" Width="354" Margin="0,444,0,0" Background="{x:Null}" FontSize="18" Padding="1,1,1,15" Click="backEvent_store">
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="#FF707070" Opacity="0.4"/>
+                    </Button.BorderBrush>
+                    <Button.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.7"/>
+                    </Button.Foreground>
+
+                </Button>
+                <Label Content="Thank you for choosing us ." HorizontalAlignment="Center" Margin="0,288,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="22">
+                    <Label.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.8"/>
+                    </Label.Foreground>
+                    <Label.Background>
+                        <SolidColorBrush Opacity="0.8"/>
+                    </Label.Background>
+                </Label>
+                <Button x:Name="_continue" Content="Download payment reciept " Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" Width="188" Margin="0,331,0,0" Background="{x:Null}" Padding="1,1,1,15" Click="gotousersAction">
+                    <Button.BorderBrush>
+                        <SolidColorBrush Color="#FF707070" Opacity="0.4"/>
+                    </Button.BorderBrush>
+                    <Button.Foreground>
+                        <SolidColorBrush Color="Black" Opacity="0.7"/>
+                    </Button.Foreground>
+
+                </Button>
+
+
+
+
+            </Grid>
+
+
+
+
+
+
+
+
+
+            <Label Content="Purchase ID " HorizontalAlignment="Left" Margin="910,50,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" FontFamily="Bahnschrift"/>
+            <Label Content="#443234" HorizontalAlignment="Left" Margin="964,82,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="18" FontFamily="Bahnschrift">
+                <Label.Foreground>
+                    <SolidColorBrush Color="Black" Opacity="0.6"/>
+                </Label.Foreground>
+                <Label.Background>
+                    <SolidColorBrush Opacity="0.6"/>
+                </Label.Background>
+            </Label>
+
+            <Label Content="DAIHATSU" HorizontalAlignment="Left" Margin="810,496,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="24" FontFamily="Bahnschrift" Width="220"/>
+            <Label Content="TERIOUS" HorizontalAlignment="Left" Margin="767,520,0,0" VerticalAlignment="Top" VerticalContentAlignment="Center" FontSize="36" FontFamily="Bahnschrift" Background="{x:Null}" Foreground="#FFE62525" HorizontalContentAlignment="Right" Width="263"/>
+
+
+
+
+        </Grid>
+
+
+
+
 
         <!--THIS IS THE VIEW FOR Manage SCREEN-->
         <Grid x:Name="manage_view" Margin="44,52,36,10" Grid.RowSpan="2" Visibility="Hidden">
-
 
 
             <!--back button config-->
@@ -1151,7 +1407,7 @@
 
 
 
-                       <!--error box for manage view-->
+                    <!--error box for manage view-->
                     <Border x:Name="error_box_manage" Style="{StaticResource FadeOutLabelStyle}" Visibility="Collapsed" CornerRadius="20" BorderBrush="#FFEA1010" BorderThickness="1" HorizontalAlignment="Left" Height="40" Margin="63,386,0,0" VerticalAlignment="Top" Width="735">
                         <Border.Background>
                             <SolidColorBrush Color="#FFF13E19" Opacity="0.1"/>
@@ -1166,13 +1422,6 @@
                         <Label x:Name="success_box_manage_content" Content="Congradulation! Your request process success! A new car added to the store. Thank you. " VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
 
-
-
-
-
-
-
-
                 </Grid>
 
 
@@ -1186,11 +1435,11 @@
                     </Label.Background>
                 </Label>
 
-                <Button x:Name="mode_swapperBtn" Content="Switch to Edit mode" Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="63,46,0,0" VerticalAlignment="Top" Height="26" Width="146" Background="{x:Null}" Click="ModeSwapAction" Padding="30,30,30,30"/>
-
-
-
+                <Button x:Name="mode_swapperBtn" Content="Switch to View mode" Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="63,46,0,0" VerticalAlignment="Top" Height="26" Width="146" Background="{x:Null}" Click="ModeSwapAction" Padding="30,30,30,30"/>
             </Grid>
+
+
+
             <!--VIEW : USER-->
             <Grid x:Name="manage_user_view" Margin="114,55,10,28" Background="#FFF9CAA9" Visibility="Hidden">
                 <Grid.ColumnDefinitions>

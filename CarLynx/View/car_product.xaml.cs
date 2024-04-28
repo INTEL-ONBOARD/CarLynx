@@ -25,9 +25,13 @@ namespace CarLynx.View
         {
             InitializeComponent();
             this.DataContext = this;
-            
-        }
 
+        }
+        public MainWindow win;
+        public void getframe(MainWindow win_)
+        {
+            win = win_;
+        }
         public String car_id { get; set; }
         public String Company { get; set; }
         public String model { get; set; }
@@ -71,6 +75,12 @@ namespace CarLynx.View
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void purchaseThis(object sender, RoutedEventArgs e)
+        {
+            win.store_view.Visibility = Visibility.Collapsed;
+            win.purchase_view.Visibility = Visibility.Visible;
         }
     }
 }

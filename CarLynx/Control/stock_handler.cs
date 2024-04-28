@@ -10,23 +10,26 @@ using CarLynx.View;
 using CarLynx;
 using System.Security.Cryptography;
 using System.Windows.Controls.Primitives;
+using System.IO;
 
 namespace CarLynx.Control
 {
     internal class stock_handler
     {
         Dbhandler handler;
+
         public stock_handler() { 
+
             handler = new Dbhandler();
         }
-        public void stock_view(StackPanel view)
+        public void stock_view(StackPanel view, MainWindow win)
         {
             DataSet stock = new DataSet();
             stock = handler.getstock_querry("select * FROM car_stock");
             foreach (DataRow row in stock.Tables[0].Rows)
             {
                 car_product car = new car_product();
-
+                car.getframe(win);
                 car.car_id = row["car_id"].ToString();
                 car.Company = row["company"].ToString();
                 car.model = row["brand"].ToString();
@@ -38,9 +41,17 @@ namespace CarLynx.Control
                 car.year = row["year"].ToString();
                 if (row["availability"].ToString() == "0"){car.status = "Pre order"; } else { car.status = "Available"; }
 
+                try
+                {
+                    car.ChangeImageSource_car("C:/Users/wenuj/source/repos/CarLynx/CarLynx/Resources/Car_models/" + row["brand"].ToString() + ".jpg");
+                    car.ChangeImageSource_logo("C:/Users/wenuj/source/repos/CarLynx/CarLynx/Resources/car_logos/" + row["company"].ToString() + ".png");
+                }
+                catch(FileNotFoundException )
+                {
+                    car.ChangeImageSource_car("C:/Users/wenuj/source/repos/CarLynx/CarLynx/Resources/Car_models/NONE.jpg");
+                    car.ChangeImageSource_logo("C:/Users/wenuj/source/repos/CarLynx/CarLynx/Resources/car_logos/" + row["company"].ToString() + ".png");
+                }
 
-                car.ChangeImageSource_car("C:/Users/wenuj/source/repos/CarLynx/CarLynx/Resources/Car_models/" + row["brand"].ToString()+".jpg");
-                car.ChangeImageSource_logo("C:/Users/wenuj/source/repos/CarLynx/CarLynx/Resources/car_logos/" + row["company"].ToString() + ".png");
 
                 view.Children.Add(car);
             }
@@ -57,7 +68,7 @@ namespace CarLynx.Control
                     foreach (DataRow row in stock.Tables[0].Rows)
                     {
                         car_product car = new car_product();
-
+                        car.getframe(win);
                         car.car_id = row["car_id"].ToString();
                         car.Company = row["company"].ToString();
                         car.model = row["brand"].ToString();
@@ -70,8 +81,16 @@ namespace CarLynx.Control
                         if (row["availability"].ToString() == "0") { car.status = "Pre order"; } else { car.status = "Available"; }
 
 
-                        car.ChangeImageSource_car("C:/Users/wenuj/source/repos/CarLynx/CarLynx/Resources/Car_models/" + row["brand"].ToString() + ".jpg");
-                        car.ChangeImageSource_logo("C:/Users/wenuj/source/repos/CarLynx/CarLynx/Resources/car_logos/" + row["company"].ToString() + ".png");
+                        try
+                        {
+                            car.ChangeImageSource_car("C:/Users/wenuj/source/repos/CarLynx/CarLynx/Resources/Car_models/" + row["brand"].ToString() + ".jpg");
+                            car.ChangeImageSource_logo("C:/Users/wenuj/source/repos/CarLynx/CarLynx/Resources/car_logos/" + row["company"].ToString() + ".png");
+                        }
+                        catch (FileNotFoundException)
+                        {
+                            car.ChangeImageSource_car("C:/Users/wenuj/source/repos/CarLynx/CarLynx/Resources/Car_models/NONE.jpg");
+                            car.ChangeImageSource_logo("C:/Users/wenuj/source/repos/CarLynx/CarLynx/Resources/car_logos/" + row["company"].ToString() + ".png");
+                        }
 
                         view.Children.Add(car);
                     }

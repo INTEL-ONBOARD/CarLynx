@@ -65,7 +65,7 @@
             <Label Content="{Binding Company}" Margin="103,285,0,0" FontSize="16" Foreground="#FF828282" VerticalAlignment="Top" HorizontalAlignment="Left" />
             <Label Content="{Binding model}" Margin="103,300,0,0" Foreground="#FF676767" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" />
             <Label Content="{Binding year}" Margin="105,332,0,0" Foreground="#FF676767" HorizontalAlignment="Left" VerticalAlignment="Top" />
-            <Button Style="{StaticResource btncutsomstyle}" Cursor="Hand" Content="Purchase" HorizontalAlignment="Left" Margin="635,314,0,0" VerticalAlignment="Top" Height="32" Width="85" Background="{x:Null}" BorderBrush="#FF797676" Click="Button_Click_1"/>
+            <Button x:Name="purchaseBtn" Style="{StaticResource btncutsomstyle}" Cursor="Hand" Content="Purchase" HorizontalAlignment="Left" Margin="635,314,0,0" VerticalAlignment="Top" Height="32" Width="85" Background="{x:Null}" BorderBrush="#FF797676" Click="purchaseThis"/>
             <Image x:Name="car_img" HorizontalAlignment="Left" Height="276" Margin="19,17,0,0" VerticalAlignment="Top" Width="387" Source="/View/model_1.jpg"/>
             <Image x:Name="logo" HorizontalAlignment="Left" Height="57" Margin="19,296,0,0" VerticalAlignment="Top" Width="63" Source="/View/tesla_logo.png"/>
             <Border BorderThickness="3,0,0,0" Margin="435,38,39,140">

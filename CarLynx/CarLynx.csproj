@@ -203,5 +203,35 @@
   <ItemGroup>
     <Resource Include="View\plus-hexagon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\bc4abdd779a6515054cf4053a63c991c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\adbd1af5f5c262ababaefc7218d22394.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\717fd11df8a475d622e4774d7b8e972d.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\KINTO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\shopping-bag.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\moving-truck.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\google-pay.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\visa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\apple-pay.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
