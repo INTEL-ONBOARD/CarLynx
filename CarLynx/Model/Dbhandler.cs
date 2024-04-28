@@ -78,7 +78,58 @@ namespace CarLynx.Model
                 con.Close();
             }
         }
+        public bool query_executer(String qu) 
+        {
 
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand(qu, con);
+                int rowssAffected = cmd.ExecuteNonQuery();
+                if (rowssAffected > 0) { Console.WriteLine("Execution success! Data injected!"); return true; } else { Console.WriteLine("Execution faild with errors!"); return false; }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                Console.WriteLine("Error occured!");
+                return false;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
+
+        //this is special method to ge the id of record you request only return the record -
+        public int query_executer_reader_id(String qu)
+        {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand(qu, con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    int id = Convert.ToInt32(dr["car_id"]);
+                    Console.WriteLine(id);
+                    return id;
+                }
+                else
+                {
+                    return 0;
+                }
+                
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return 0;
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
 
     }
 }

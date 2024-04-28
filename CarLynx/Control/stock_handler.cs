@@ -8,6 +8,8 @@ using System.Windows.Controls;
 using CarLynx.Model;
 using CarLynx.View;
 using CarLynx;
+using System.Security.Cryptography;
+using System.Windows.Controls.Primitives;
 
 namespace CarLynx.Control
 {
@@ -84,6 +86,20 @@ namespace CarLynx.Control
             {
                 Console.WriteLine(ex.Message);
             }
+
+        }
+        public bool add_stock(MainWindow win)
+        {
+            String query = "INSERT INTO car_stock (car_id,company,brand,info,range,top_speed,mph,price,year,availability,type) VALUES (" + (get_stock_count() + 1).ToString() +",'"+ win.select_vehicle_manufacture.Text.ToString() + "','" + win.select_vehicle_model.Text.ToString() + "','" + win.selecet_vehicle_info.Text.ToString() + "'," + win.select_vehicle_range.Text.ToString()+ "," + win.select_vehicle_speed.Text.ToString() + "," + win.select_vehicle_mph.Text.ToString() + "," + win.select_vehicle_price.Text.ToString() + "," + win.select_vehicle_year.Text.ToString() + "," + "1"+ ",'" + win.select_vehicle_type.Text.ToString() + "')";
+            Console.WriteLine(query);
+            bool isaccpeted = handler.query_executer(query);
+            if (isaccpeted) { return true; } else { return false; }
+        }
+        public int get_stock_count()
+        {
+            int last_id = handler.query_executer_reader_id("SELECT TOP 1 * FROM car_stock ORDER BY car_id DESC;");
+
+            if (last_id >= 0) { return last_id; }else{  return 0; }
 
         }
     }

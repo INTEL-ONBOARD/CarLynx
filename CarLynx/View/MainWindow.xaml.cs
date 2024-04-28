@@ -25,9 +25,11 @@ namespace CarLynx
     public partial class MainWindow : Window
     {
         private bool isdone = false;
+        stock_handler handler;
         public MainWindow()
         {
             InitializeComponent();
+            handler = new stock_handler();
         }
 
 
@@ -68,7 +70,6 @@ namespace CarLynx
             store_view.Visibility = Visibility.Visible;
             home_default_admin.Visibility = Visibility.Hidden;
             itemView.Content = panelView;
-            stock_handler handler = new stock_handler();
             panelView.Children.Clear();
             handler.stock_view(panelView);
 
@@ -101,7 +102,7 @@ namespace CarLynx
             String stocktag = "";
 
             itemView.Content = panelView;
-            stock_handler handler = new stock_handler();
+            
             panelView.Children.Clear();
 
 
@@ -301,6 +302,7 @@ namespace CarLynx
 
                 if (isdone != false)
                 {
+                    handler.add_stock(this);
                     this.clear_Action();
                     success_box_manage.Visibility = Visibility.Visible;
                     error_box_manage.Visibility = Visibility.Collapsed;
@@ -363,6 +365,10 @@ namespace CarLynx
                     }
                 }
             }
+        }
+        private void get_stock_id()
+        {
+
         }
     }
 }
