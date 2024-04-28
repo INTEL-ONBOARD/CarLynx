@@ -526,7 +526,7 @@
 
 
         <!--THIS IS THE VIEW FOR LOGIN SCREEN-->
-        <Grid x:Name="login_window" Margin="71,74,71,54" Visibility="Hidden" Grid.RowSpan="2" >
+        <Grid x:Name="login_window" Margin="71,74,71,54" Visibility="Visible" Grid.RowSpan="2" >
             <Image HorizontalAlignment="Left" Height="509" Margin="302,0,0,0" VerticalAlignment="Center" Width="720" Source="/View/poster.png"/>
             <Grid x:Name="login_pane" Margin="29,22,691,54">
                 <!--<Button Style="{StaticResource RoundButtonStyle}" Content="Login" Margin="68,366,68,78" Background="{x:Null}" Cursor="Hand"/>-->
@@ -919,7 +919,7 @@
 
 
         <!--THIS IS THE VIEW FOR Manage SCREEN-->
-        <Grid x:Name="manage_view" Margin="44,52,36,10" Grid.RowSpan="2" Visibility="Visible">
+        <Grid x:Name="manage_view" Margin="44,52,36,10" Grid.RowSpan="2" Visibility="Hidden">
 
 
 
