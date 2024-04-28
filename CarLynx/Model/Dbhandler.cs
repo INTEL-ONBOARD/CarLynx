@@ -130,6 +130,35 @@ namespace CarLynx.Model
                 con.Close();
             }
         }
+        public String get_id(String qu)
+        {
+            try
+            {
+                con.Open();
+                SqlCommand cmd = new SqlCommand(qu, con);
+                SqlDataReader dr = cmd.ExecuteReader();
+                if (dr.Read())
+                {
+                    String id =dr["UserID"].ToString();
+                    Console.WriteLine("++++"+id);
+                    return id;
+                }
+                else
+                {
+                    return "";
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return "";
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
 
     }
 }

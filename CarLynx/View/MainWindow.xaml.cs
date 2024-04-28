@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -26,13 +28,70 @@ namespace CarLynx
     {
         private bool isdone = false;
         stock_handler handler;
+        public int counter = 345234;
         public MainWindow()
         {
             InitializeComponent();
             handler = new stock_handler();
+            this.DataContext = this;
+            this.purchase_info1.DataContext = this;
         }
 
 
+        public String uid_ { get; set; }
+        public String username_ { get; set; }
+        public String password_ { get; set; }
+        public String name_ { get; set; }
+        public String contact_ { get; set; }
+        public String address_ { get; set; }
+        public String age_ { get; set; }
+
+        public String car_id_rented { get; set; }
+
+        public void binder(String path,String Company, String model, String price, String year)
+        {
+            unamef.Content = this.username_;
+            addrf.Content = this.address_;
+            namef.Content = this.name_;
+            contactf.Content = this.contact_;
+            ChangeImageSource_car_review(path);
+
+            comf.Content = Company;
+            modf.Content = model;
+            yearf.Content = year;
+            pricef.Content = "$ "+price;
+            bindf.Content = Company + " " + model;
+            pValue.Content = "#" + (uid_ + counter);
+
+        }
+
+        public void ChangeImageSource_car_review(string imagePath)
+        {
+            // Create a new BitmapImage with the provided image path
+            try
+            {
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.UriSource = new Uri(imagePath, UriKind.RelativeOrAbsolute);
+                bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                bitmap.EndInit();
+
+                // Set the BitmapImage as the source of the Image control
+                this.image_fill.Source = bitmap;
+            }
+            catch
+            {
+                BitmapImage bitmap = new BitmapImage();
+                bitmap.BeginInit();
+                bitmap.UriSource = new Uri("C:/Users/wenuj/source/repos/CarLynx/CarLynx/Resources/Car_models/NONE.jpg", UriKind.RelativeOrAbsolute);
+                bitmap.CacheOption = BitmapCacheOption.OnLoad;
+                bitmap.EndInit();
+
+                // Set the BitmapImage as the source of the Image control
+                this.image_fill.Source = bitmap;
+            }
+
+        }
 
         private void exitEvent(object sender, RoutedEventArgs e)
         {
@@ -99,8 +158,8 @@ namespace CarLynx
         {
             String man_type = manufacture_type.Text;
             String veh_type = vehicle_type.Text;
-            String saletag = "";
-            String stocktag = "";
+            //String saletag = "";
+            //String stocktag = "";
 
             itemView.Content = panelView;
             
@@ -382,6 +441,25 @@ namespace CarLynx
             manufacture_type.SelectedIndex = 0;
             vehicle_type.SelectedIndex = 0;
 
+        }
+
+
+
+        private void purchaseNow(object sender, RoutedEventArgs e)
+        {
+
+            purchase_handler ph = new purchase_handler();
+            Console.WriteLine("IN");
+            ph.purchase_do("#" + (uid_ + counter), uid_, car_id_rented);
+            Console.WriteLine("IN 2");
+            counter++;
+            pValue.Visibility = Visibility.Hidden;
+            p_lbl.Visibility = Visibility.Hidden;
+            image_fill.Visibility = Visibility.Hidden;
+            comf.Visibility = Visibility.Hidden;
+            modf.Visibility = Visibility.Hidden;
+            purchase_info2.Visibility = Visibility.Visible;
+            purchase_info1.Visibility = Visibility.Hidden;
         }
     }
 }

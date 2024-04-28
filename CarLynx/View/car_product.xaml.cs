@@ -14,6 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+
 namespace CarLynx.View
 {
     /// <summary>
@@ -42,6 +43,8 @@ namespace CarLynx.View
         public String mph { get; set; }
         public String year { get; set; }
         public String status { get; set; }
+
+
 
         public void ChangeImageSource_car(string imagePath)
         {
@@ -80,6 +83,26 @@ namespace CarLynx.View
         private void purchaseThis(object sender, RoutedEventArgs e)
         {
             win.store_view.Visibility = Visibility.Collapsed;
+            login_process ps = new login_process();
+            String uid = ps.get_user_id(win.uname.Text,win.pwd.Text);
+            win.car_id_rented = car_id;
+
+            stock_handler sh = new stock_handler();
+            sh.user_dump(uid ,win);
+            
+
+            win.binder("C:/Users/wenuj/source/repos/CarLynx/CarLynx/Resources/Car_models/" + model + ".jpg",Company,model,price,year );
+            
+
+
+
+            win.pValue.Visibility = Visibility.Visible;
+            win.p_lbl.Visibility = Visibility.Visible;
+            win.image_fill.Visibility = Visibility.Visible;
+            win.comf.Visibility = Visibility.Visible;
+            win.modf.Visibility = Visibility.Visible;
+            win.purchase_info2.Visibility = Visibility.Hidden;
+            win.purchase_info1.Visibility = Visibility.Visible;
             win.purchase_view.Visibility = Visibility.Visible;
         }
     }

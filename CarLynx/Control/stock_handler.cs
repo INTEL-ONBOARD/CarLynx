@@ -121,5 +121,26 @@ namespace CarLynx.Control
             if (last_id >= 0) { return last_id; }else{  return 0; }
 
         }
+
+        public void user_dump(String id ,MainWindow win)
+        {
+            DataSet stock = new DataSet();
+            stock = handler.getstock_querry("select * FROM users WHERE UserID = '"+id+"'");
+            foreach (DataRow row in stock.Tables[0].Rows)
+            {
+                win.uid_ = row["UserID"].ToString();
+                win.username_ = row["username"].ToString();
+                win.password_ = row["password"].ToString();
+                win.name_ = row["name"].ToString();
+                win.contact_ = row["contact"].ToString();
+                win.address_ = row["address"].ToString();
+                win.age_ = row["age"].ToString();
+
+                Console.WriteLine(win.username_);
+            }
+        }
+
+
+
     }
 }

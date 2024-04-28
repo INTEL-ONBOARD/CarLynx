@@ -13,8 +13,16 @@ namespace CarLynx.Control
         {
             
             Dbhandler handler = new Dbhandler();
-            String querry = "SELECT * FROM users WHERE Username = '" + username + "' AND Password = '" + password + "'";
+            String querry = "SELECT * FROM users WHERE username = '" + username + "' AND password = '" + password + "'";
             if (handler.loginquery(querry)) { return true; }else { return false; }  
         }
+        public String get_user_id(String username, String password)
+        {
+            Dbhandler handler = new Dbhandler();
+            String querry = "SELECT * FROM users WHERE username = '" + username + "' AND password = '" + password + "'";
+            String get_id = handler.get_id(querry);
+            return get_id;
+        }
+        
     }
 }

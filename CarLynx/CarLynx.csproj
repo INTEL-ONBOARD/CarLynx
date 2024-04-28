@@ -68,6 +68,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Control\login_process.cs" />
+    <Compile Include="Control\purchase_handler.cs" />
     <Compile Include="Control\stock_handler.cs" />
     <Compile Include="Model\Dbhandler.cs" />
     <Compile Include="View\car_product.xaml.cs">
