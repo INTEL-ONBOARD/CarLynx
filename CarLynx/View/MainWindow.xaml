@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:CarLynx"
+
         mc:Ignorable="d"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen"
@@ -463,6 +463,51 @@
         </Style>
 
 
+        <!--Special style for fade out effect : LABEL -->
+
+        <!--<Style TargetType="Label" x:Key="FadeOutLabelStyle">
+            <Setter Property="Visibility" Value="Collapsed" />
+            <Setter Property="Opacity" Value="1" />
+            <Style.Triggers>
+                <Trigger Property="Visibility" Value="Visible">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                 From="1" To="0" Duration="0:0:5">
+                                    <DoubleAnimation.EasingFunction>
+                                        <PowerEase/>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>-->
+
+        <!--Special style for fade out effect : Border-->
+
+        <Style TargetType="Border" x:Key="FadeOutLabelStyle">
+            <Setter Property="Visibility" Value="Collapsed" />
+            <Setter Property="Opacity" Value="1" />
+            <Style.Triggers>
+                <Trigger Property="Visibility" Value="Visible">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard >
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Opacity"
+                                 From="1" To="0" Duration="0:0:6">
+                                    <DoubleAnimation.EasingFunction>
+                                        <PowerEase/>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </Trigger.EnterActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
 
 
 
@@ -568,9 +613,9 @@
 
             </Grid>
             <Label Content=" CarLynx © All Rights Reserved. " HorizontalAlignment="Left" Margin="109,438,0,0" VerticalAlignment="Top" Foreground="#FFA5A5A5"/>
-            <Border x:Name="error_box" Visibility="Hidden" CornerRadius="20" BorderBrush="#FF949494" BorderThickness="1" HorizontalAlignment="Left" Height="40" Margin="367,500,0,0" VerticalAlignment="Top" Width="310">
+            <Border x:Name="error_box" Visibility="Hidden" CornerRadius="20" BorderBrush="#FFEA1010" BorderThickness="1" HorizontalAlignment="Left" Height="40" Margin="367,500,0,0" VerticalAlignment="Top" Width="310">
                 <Border.Background>
-                    <SolidColorBrush Color="#FFE0C3BD" Opacity="0.1"/>
+                    <SolidColorBrush Color="#FFF13E19" Opacity="0.1"/>
                 </Border.Background>
                 <Label Content="Given Username or password are not valid!" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Border>
@@ -654,6 +699,8 @@
                 <ColumnDefinition Width="250px "></ColumnDefinition>
 
             </Grid.ColumnDefinitions>
+            <Label Content="Newly Arrivals" HorizontalAlignment="Left"  VerticalAlignment="Top" FontFamily="Bahnschrift Light" Grid.Column="1" Margin="137,68,0,0" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" Foreground="#FFE62B2B" FontWeight="Bold" FontSize="14"/>
+            <Label Content="Fresh CARS" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Bahnschrift Light" FontSize="24" Margin="102,36,0,0" Grid.Column="1"/>
 
             <Border Grid.Column="1" Margin="0,56,10,79">
                 <Border.BorderBrush>
@@ -967,130 +1014,169 @@
                 <Label Content="MANAGE" HorizontalAlignment="Left" Margin="866,-15,0,0" VerticalAlignment="Top" FontFamily="Bahnschrift Light" FontSize="24"/>
 
 
-                <Label Content="Vehicle Manufacture" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,106,0,0">
-                    <Label.Foreground>
-                        <SolidColorBrush Color="Black" Opacity="0.6"/>
-                    </Label.Foreground>
-                    <Label.Background>
-                        <SolidColorBrush Opacity="0.445"/>
-                    </Label.Background>
-                </Label>
+                <Grid x:Name="view_mode_view" Margin="0,82,0,0" Visibility="Hidden">
+                    <Label Content="View stock and Update items mode : Upcoming patch" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
-                <ComboBox 
-                        x:Name="selector" 
+                </Grid>
+
+                <Grid x:Name="edit_mode_view" Margin="0,82,0,0" Visibility="Visible">
+
+
+                    <Label Content="Vehicle Manufacture" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="476,36,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="Black" Opacity="0.6"/>
+                        </Label.Foreground>
+                        <Label.Background>
+                            <SolidColorBrush Opacity="0.445"/>
+                        </Label.Background>
+                    </Label>
+
+                    <ComboBox 
+                        x:Name="select_vehicle_manufacture" 
                         FontSize="13"
                         Style="{DynamicResource theComboBox}"
                         Padding="15,5,15,5"
                         HorizontalContentAlignment="Center"
                         VerticalAlignment="Top"
-                        ItemContainerStyle="{DynamicResource theComboBoxItem}" Height="40" VerticalContentAlignment="Center" Margin="0,136,380,0" HorizontalAlignment="Right" Width="242" Foreground="Black" BorderBrush="#FF0C0000" Background="#FFECECEC">
-                    <ComboBoxItem>All</ComboBoxItem>
-                    <ComboBoxItem>TOYOTA</ComboBoxItem>
-                    <ComboBoxItem>BMW</ComboBoxItem>
-                    <ComboBoxItem>TESLA</ComboBoxItem>
-                    <ComboBoxItem>BENZ</ComboBoxItem>
-                    <ComboBoxItem>AUDI</ComboBoxItem>
-                    <ComboBoxItem>HYHUNDAI</ComboBoxItem>
-                    <ComboBoxItem>NISSAN</ComboBoxItem>
-                    <ComboBoxItem>SUZUKI</ComboBoxItem>
-                </ComboBox>
+                        ItemContainerStyle="{DynamicResource theComboBoxItem}" Height="40" VerticalContentAlignment="Center" Margin="0,66,380,0" HorizontalAlignment="Right" Width="242" Foreground="Black" BorderBrush="#FF0C0000" Background="#FFECECEC">
+                        <ComboBoxItem>TOYOTA</ComboBoxItem>
+                        <ComboBoxItem>BMW</ComboBoxItem>
+                        <ComboBoxItem>TESLA</ComboBoxItem>
+                        <ComboBoxItem>BENZ</ComboBoxItem>
+                        <ComboBoxItem>AUDI</ComboBoxItem>
+                        <ComboBoxItem>HYHUNDAI</ComboBoxItem>
+                        <ComboBoxItem>NISSAN</ComboBoxItem>
+                        <ComboBoxItem>SUZUKI</ComboBoxItem>
+                    </ComboBox>
 
 
-                <Label Content="Vehicle Type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,106,0,0">
-                    <Label.Foreground>
-                        <SolidColorBrush Color="Black" Opacity="0.6"/>
-                    </Label.Foreground>
-                    <Label.Background>
-                        <SolidColorBrush Opacity="0.445"/>
-                    </Label.Background>
-                </Label>
-                <ComboBox 
-                    x:Name="selector_Copy" 
+                    <Label Content="Vehicle Type" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="220,36,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="Black" Opacity="0.6"/>
+                        </Label.Foreground>
+                        <Label.Background>
+                            <SolidColorBrush Opacity="0.445"/>
+                        </Label.Background>
+                    </Label>
+                    <ComboBox 
+                    x:Name="select_vehicle_type" 
                     FontSize="13"
                     Style="{DynamicResource theComboBox}"
                     Padding="15,5,15,5"
                     HorizontalContentAlignment="Center"
                     VerticalAlignment="Top"
-                    ItemContainerStyle="{DynamicResource theComboBoxItem}" Height="40" VerticalContentAlignment="Center" Margin="0,136,678,0" HorizontalAlignment="Right" Width="242" Foreground="Black" BorderBrush="#FF0C0000" Background="#FFECECEC">
-                    <ComboBoxItem Content="All"/>
-                    <ComboBoxItem Content="SEDAN"/>
-                    <ComboBoxItem Content="COUP"/>
-                    <ComboBoxItem Content="CAB"/>
-                    <ComboBoxItem Content="JEEP"/>
-                    <ComboBoxItem Content="HATCHBACK"/>
-                    <ComboBoxItem Content="SUV"/>
-                    <ComboBoxItem Content="VAN"/>
-                </ComboBox>
+                    ItemContainerStyle="{DynamicResource theComboBoxItem}" Height="40" VerticalContentAlignment="Center" Margin="0,66,678,0" HorizontalAlignment="Right" Width="242" Foreground="Black" BorderBrush="#FF0C0000" Background="#FFECECEC">
+                        <ComboBoxItem Content="SEDAN"/>
+                        <ComboBoxItem Content="COUP"/>
+                        <ComboBoxItem Content="CAB"/>
+                        <ComboBoxItem Content="JEEP"/>
+                        <ComboBoxItem Content="HATCHBACK"/>
+                        <ComboBoxItem Content="SUV"/>
+                        <ComboBoxItem Content="VAN"/>
+                    </ComboBox>
 
 
-                <Label Content="Top Speed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="534,272,0,0">
-                    <Label.Foreground>
-                        <SolidColorBrush Color="Black" Opacity="0.6"/>
-                    </Label.Foreground>
-                    <Label.Background>
-                        <SolidColorBrush Opacity="0.445"/>
-                    </Label.Background>
-                </Label>
-                <TextBox x:Name="Model_year_selector" Style="{StaticResource CustomTextBoxStyle}" Margin="360,303,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
+                    <Label Content="Top Speed" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="534,202,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="Black" Opacity="0.6"/>
+                        </Label.Foreground>
+                        <Label.Background>
+                            <SolidColorBrush Opacity="0.445"/>
+                        </Label.Background>
+                    </Label>
+                    <TextBox x:Name="select_vehicle_speed" Style="{StaticResource CustomTextBoxStyle}" Margin="360,233,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
 
-                <Label Content="Mph" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="563,351,0,0">
-                    <Label.Foreground>
-                        <SolidColorBrush Color="Black" Opacity="0.6"/>
-                    </Label.Foreground>
-                    <Label.Background>
-                        <SolidColorBrush Opacity="0.445"/>
-                    </Label.Background>
-                </Label>
-                <TextBox x:Name="Model_name_selector" Style="{StaticResource CustomTextBoxStyle}" Margin="360,381,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
-                <TextBox x:Name="Model_info_selector" Style="{StaticResource CustomTextBoxStyle}" Margin="659,126,0,0" TextWrapping="Wrap" Tag="" Width="277" Height="295" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
-                <Label Content="Vehicle Description" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="808,95,0,0">
-                    <Label.Foreground>
-                        <SolidColorBrush Color="Black" Opacity="0.6"/>
-                    </Label.Foreground>
-                    <Label.Background>
-                        <SolidColorBrush Opacity="0.445"/>
-                    </Label.Background>
-                </Label>
+                    <Label Content="Mph" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="563,281,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="Black" Opacity="0.6"/>
+                        </Label.Foreground>
+                        <Label.Background>
+                            <SolidColorBrush Opacity="0.445"/>
+                        </Label.Background>
+                    </Label>
+                    <TextBox x:Name="select_vehicle_mph" Style="{StaticResource CustomTextBoxStyle}" Margin="360,311,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
+                    <TextBox x:Name="selecet_vehicle_info" Style="{StaticResource CustomTextBoxStyle}" Margin="659,56,0,0" TextWrapping="Wrap" Tag="" Width="277" Height="295" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
+                    <Label Content="Vehicle Description" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="808,25,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="Black" Opacity="0.6"/>
+                        </Label.Foreground>
+                        <Label.Background>
+                            <SolidColorBrush Opacity="0.445"/>
+                        </Label.Background>
+                    </Label>
 
-                <Button Content="Add" Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="63,456,0,0" VerticalAlignment="Top" Height="40" Width="766" Background="{x:Null}" Click="Button_Click" Padding="30,30,30,30"/>
-                <Label Content="Range" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="550,189,0,0">
-                    <Label.Foreground>
-                        <SolidColorBrush Color="Black" Opacity="0.6"/>
-                    </Label.Foreground>
-                    <Label.Background>
-                        <SolidColorBrush Opacity="0.445"/>
-                    </Label.Background>
-                </Label>
-                <TextBox x:Name="Model_year_selector_Copy" Style="{StaticResource CustomTextBoxStyle}" Margin="360,217,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
-                <Label Content="Vehicle Model" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="215,189,0,0">
-                    <Label.Foreground>
-                        <SolidColorBrush Color="Black" Opacity="0.6"/>
-                    </Label.Foreground>
-                    <Label.Background>
-                        <SolidColorBrush Opacity="0.445"/>
-                    </Label.Background>
-                </Label>
-                <TextBox x:Name="Model_name_selector_Copy" Style="{StaticResource CustomTextBoxStyle}" Margin="63,219,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
-                <Label Content="Vehicle Model year" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="189,272,0,0">
-                    <Label.Foreground>
-                        <SolidColorBrush Color="Black" Opacity="0.6"/>
-                    </Label.Foreground>
-                    <Label.Background>
-                        <SolidColorBrush Opacity="0.445"/>
-                    </Label.Background>
-                </Label>
-                <TextBox x:Name="Model_year_selector_Copy1" Style="{StaticResource CustomTextBoxStyle}" Margin="63,303,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
-                <Label Content="Vehicle Price" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="223,351,0,0">
-                    <Label.Foreground>
-                        <SolidColorBrush Color="Black" Opacity="0.6"/>
-                    </Label.Foreground>
-                    <Label.Background>
-                        <SolidColorBrush Opacity="0.445"/>
-                    </Label.Background>
-                </Label>
-                <TextBox x:Name="Model_name_selector_Copy1" Style="{StaticResource CustomTextBoxStyle}" Margin="63,381,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
-                <Button Content="Clear" Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="845,456,0,0" VerticalAlignment="Top" Height="40" Width="90" Background="#FFE2E2E2" Click="Button_Click" BorderBrush="#FFE2E2E2"/>
-                <Label Content="UPDATE STOCK" HorizontalAlignment="Left" Margin="63,41,0,0" VerticalAlignment="Top" Width="903" HorizontalContentAlignment="Right" Padding="5,5,10,5" Height="36" VerticalContentAlignment="Center">
+                    <!--<Button Content="Add" Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="712,386,0,0" VerticalAlignment="Top" Height="40" Width="170" Background="{x:Null}"  Padding="30,30,30,30"/>-->
+                    <Label Content="Range" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="550,119,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="Black" Opacity="0.6"/>
+                        </Label.Foreground>
+                        <Label.Background>
+                            <SolidColorBrush Opacity="0.445"/>
+                        </Label.Background>
+                    </Label>
+                    <TextBox x:Name="select_vehicle_range" Style="{StaticResource CustomTextBoxStyle}" Margin="360,147,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
+                    <Label Content="Vehicle Model" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="215,119,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="Black" Opacity="0.6"/>
+                        </Label.Foreground>
+                        <Label.Background>
+                            <SolidColorBrush Opacity="0.445"/>
+                        </Label.Background>
+                    </Label>
+                    <TextBox x:Name="select_vehicle_model" Style="{StaticResource CustomTextBoxStyle}" Margin="63,149,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
+                    <Label Content="Vehicle Model year" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="189,202,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="Black" Opacity="0.6"/>
+                        </Label.Foreground>
+                        <Label.Background>
+                            <SolidColorBrush Opacity="0.445"/>
+                        </Label.Background>
+                    </Label>
+                    <TextBox x:Name="select_vehicle_year" Style="{StaticResource CustomTextBoxStyle}" Margin="63,233,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
+                    <Label Content="Vehicle Price" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="223,281,0,0">
+                        <Label.Foreground>
+                            <SolidColorBrush Color="Black" Opacity="0.6"/>
+                        </Label.Foreground>
+                        <Label.Background>
+                            <SolidColorBrush Opacity="0.445"/>
+                        </Label.Background>
+                    </Label>
+                    <TextBox x:Name="select_vehicle_price" Style="{StaticResource CustomTextBoxStyle}" Margin="63,311,0,0" TextWrapping="Wrap" Tag="" Width="242" Height="40" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" HorizontalAlignment="Left" />
+                    <Button x:Name="clearFeilds"  Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="883,386,0,0" VerticalAlignment="Top" Height="40" Width="53" Background="{x:Null}"  BorderBrush="{x:Null}" Click="clear_Action">
+                        <Image Height="29" Width="53" Source="/View/redo.png" RenderTransformOrigin="1.651,11.069" Opacity="0.6" ToolTip="Reset"/>
+                    </Button>
+                    <Button x:Name="addCarBtn"  Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="837,386,0,0" VerticalAlignment="Top" Height="40" Width="53" Background="{x:Null}"  BorderBrush="{x:Null}" Click="Addcar_action">
+                        <Image Height="29" Width="53" Source="/View/plus-hexagon.png" RenderTransformOrigin="1.651,11.069" Opacity="0.6" ToolTip="Add Car"/>
+                    </Button>
+
+
+
+                       <!--error box for manage view-->
+                    <Border x:Name="error_box_manage" Style="{StaticResource FadeOutLabelStyle}" Visibility="Collapsed" CornerRadius="20" BorderBrush="#FFEA1010" BorderThickness="1" HorizontalAlignment="Left" Height="40" Margin="63,386,0,0" VerticalAlignment="Top" Width="735">
+                        <Border.Background>
+                            <SolidColorBrush Color="#FFF13E19" Opacity="0.1"/>
+                        </Border.Background>
+                        <Label x:Name="error_box_manage_content" Content="" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+
+                    <Border x:Name="success_box_manage" Style="{StaticResource FadeOutLabelStyle}" Visibility="Collapsed" CornerRadius="20" BorderBrush="#FF2BEA10" BorderThickness="1" HorizontalAlignment="Left" Height="40" Margin="63,386,0,0" VerticalAlignment="Top" Width="735">
+                        <Border.Background>
+                            <SolidColorBrush Color="#FF19F126" Opacity="0.1"/>
+                        </Border.Background>
+                        <Label x:Name="success_box_manage_content" Content="Congradulation! Your request process success! A new car added to the store. Thank you. " VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    </Border>
+
+
+
+
+
+
+
+
+                </Grid>
+
+
+                <Label x:Name="mode_titile" Content="UPDATE STOCK" HorizontalAlignment="Left" Margin="63,41,0,0" VerticalAlignment="Top" Width="903" HorizontalContentAlignment="Right" Padding="5,5,10,5" Height="36" VerticalContentAlignment="Center">
                     <Label.Background>
                         <LinearGradientBrush EndPoint="2,1" StartPoint="0.5,0" SpreadMethod="Pad" MappingMode="RelativeToBoundingBox" Opacity="0.2">
                             <GradientStop Color="Black" Offset="0.718"/>
@@ -1100,7 +1186,7 @@
                     </Label.Background>
                 </Label>
 
-                <Button Content="Switch to View mode" Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="63,46,0,0" VerticalAlignment="Top" Height="26" Width="146" Background="{x:Null}" Click="Button_Click" Padding="30,30,30,30"/>
+                <Button x:Name="mode_swapperBtn" Content="Switch to Edit mode" Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="63,46,0,0" VerticalAlignment="Top" Height="26" Width="146" Background="{x:Null}" Click="ModeSwapAction" Padding="30,30,30,30"/>
 
 
 

@@ -197,5 +197,11 @@
   <ItemGroup>
     <Resource Include="View\category.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\plus-hexagon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,7 +24,7 @@ namespace CarLynx
     /// </summary>
     public partial class MainWindow : Window
     {
-
+        private bool isdone = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -168,14 +169,200 @@ namespace CarLynx
             manage_user_view.Visibility = Visibility.Visible;
         }
 
-        private void manufacture_type_select_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
+
+        private void ModeSwapAction(object sender, RoutedEventArgs e)
+        {
+            if (view_mode_view.Visibility == Visibility.Visible)
+            {
+                view_mode_view.Visibility = Visibility.Hidden;
+                edit_mode_view.Visibility= Visibility.Visible;
+                mode_titile.Content = "UPDATE STOCK";
+                mode_swapperBtn.Content = "Switch to View mode";
+            }
+            else
+            {
+                view_mode_view.Visibility = Visibility.Visible;
+                edit_mode_view.Visibility = Visibility.Hidden;
+                mode_titile.Content = "VIEW STOCK";
+                mode_swapperBtn.Content = "Switch to Update mode";
+            }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Addcar_action(object sender, RoutedEventArgs e)
         {
+            bool iserrorpopped = false;
 
+            try
+            {
+                success_box_manage.Visibility = Visibility.Collapsed;
+                error_box_manage.Visibility = Visibility.Collapsed;
+                UIElement[] inputElements = new UIElement[] { select_vehicle_type, select_vehicle_manufacture, select_vehicle_model,select_vehicle_model, select_vehicle_range,select_vehicle_year,select_vehicle_speed,select_vehicle_price,select_vehicle_mph,selecet_vehicle_info };
+                foreach (var element in inputElements)
+                {
+                    if (element is TextBox textBox)
+                    {
+                        if (textBox.Text == "")
+                        {
+                            error_box_manage_content.Content = "All input feilds must be filled. Try again!";
+                            success_box_manage.Visibility = Visibility.Collapsed;
+                            error_box_manage.Visibility = Visibility.Visible;
+                            iserrorpopped = true;
+                            break; 
+                        }
+                    }
+                    else if (element is ComboBox comboBox)
+                    {
+                        if (comboBox.Text == "")
+                        {
+                            error_box_manage_content.Content = "All input feilds must be filled. Try again!";
+                            success_box_manage.Visibility = Visibility.Collapsed;
+                            error_box_manage.Visibility = Visibility.Visible;
+                            iserrorpopped = true;
+                            break;
+                        }
+                    }
+                }
+
+                if (iserrorpopped != true)
+                {
+                    foreach (var element in inputElements)
+                    {
+                        if (element is TextBox textBox)
+                        {
+                            if (textBox.Name == "select_vehicle_year")
+                            {
+                                string pattern = @"^[1-9]\d{3}(\.\d+)?$";
+                                if (!Regex.IsMatch(textBox.Text, pattern))
+                                {
+                                    error_box_manage_content.Content = "Vehicle year must be a valid number. Try again!";
+                                    success_box_manage.Visibility = Visibility.Collapsed;
+                                    error_box_manage.Visibility = Visibility.Visible;
+                                    isdone = false;
+                                    break;
+                                }
+                            }
+                            else if (textBox.Name == "select_vehicle_range")
+                            {
+                                string pattern = @"^[-+]?[0-9]+(\.[0-9]+)?([eE][-+]?[0-9]+)?$";
+                                if (!Regex.IsMatch(textBox.Text, pattern))
+                                {
+                                    error_box_manage_content.Content = "Vehicle range must be a valid number. Try again!";
+                                    success_box_manage.Visibility = Visibility.Collapsed;
+                                    error_box_manage.Visibility = Visibility.Visible;
+                                    isdone = false;
+                                    break;
+                                }
+                            }
+                            else if (textBox.Name == "select_vehicle_speed")
+                            {
+                                string pattern = @"^[1-9][0-9]*(\.[0-9]+)?$";
+                                if (!Regex.IsMatch(textBox.Text, pattern))
+                                {
+                                    error_box_manage_content.Content = "Vehicle Top speed must be a valid number. Try again!";
+                                    success_box_manage.Visibility = Visibility.Collapsed;
+                                    error_box_manage.Visibility = Visibility.Visible;
+                                    isdone = false;
+                                    break;
+                                }
+                            }
+                            else if (textBox.Name == "select_vehicle_price")
+                            {
+                                string pattern = @"^[-+]?[0-9]+(\.[0-9]+)?([eE][-+]?[0-9]+)?$";
+                                if (!Regex.IsMatch(textBox.Text, pattern))
+                                {
+                                    error_box_manage_content.Content = "Vehicle Price must be a number. Try again!";
+                                    success_box_manage.Visibility = Visibility.Collapsed;
+                                    error_box_manage.Visibility = Visibility.Visible;
+                                    isdone = false;
+                                    break;
+                                }
+                            }
+                            else if (textBox.Name == "select_vehicle_mph")
+                            {
+                                string pattern = @"^[-+]?[0-9]+(\.[0-9]+)?([eE][-+]?[0-9]+)?$";
+                                if (!Regex.IsMatch(textBox.Text, pattern))
+                                {
+                                    error_box_manage_content.Content = "Vehicle Mph must be a number. Try again!";
+                                    success_box_manage.Visibility = Visibility.Collapsed;
+                                    error_box_manage.Visibility = Visibility.Visible;
+                                    isdone = false;
+                                    break;
+                                }
+                            }
+                            else
+                            {
+                                isdone = true;
+                            }
+                        }
+                    }
+                }
+
+
+                if (isdone != false)
+                {
+                    this.clear_Action();
+                    success_box_manage.Visibility = Visibility.Visible;
+                    error_box_manage.Visibility = Visibility.Collapsed;
+                    Console.WriteLine("All SET CALLING DB UPDATE");
+                    isdone = false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error occured > "+ ex.Message);
+
+            }
+        }
+
+        private void clear_Action()
+        {
+            UIElement[] inputElements = new UIElement[] { select_vehicle_type, select_vehicle_manufacture, select_vehicle_model, select_vehicle_model, select_vehicle_range, select_vehicle_year, select_vehicle_speed, select_vehicle_price, select_vehicle_mph, selecet_vehicle_info };
+            success_box_manage.Visibility = Visibility.Collapsed;
+            foreach (var element in inputElements)
+            {
+                if (element is TextBox textBox)
+                {
+                    if (textBox.Text != "")
+                    {
+                        textBox.Text = "";
+                    }
+
+                }
+                else if (element is ComboBox comboBox)
+                {
+                    if (comboBox.Text != "")
+                    {
+                        comboBox.Text = "";
+
+                    }
+                }
+            }
+        }
+
+        private void clear_Action(object sender, RoutedEventArgs e)
+        {
+            UIElement[] inputElements = new UIElement[] { select_vehicle_type, select_vehicle_manufacture, select_vehicle_model, select_vehicle_model, select_vehicle_range, select_vehicle_year, select_vehicle_speed, select_vehicle_price, select_vehicle_mph, selecet_vehicle_info };
+            error_box_manage.Visibility = Visibility.Collapsed;
+            foreach (var element in inputElements)
+            {
+                if (element is TextBox textBox)
+                {
+                    if (textBox.Text != "")
+                    {
+                        textBox.Text = "";
+                    }
+                }
+                else if (element is ComboBox comboBox)
+                {
+                    if (comboBox.Text != "")
+                    {
+                        comboBox.Text = "";
+
+                    }
+                }
+            }
         }
     }
 }
