@@ -59,7 +59,7 @@ namespace CarLynx
             comf.Content = Company;
             modf.Content = model;
             yearf.Content = year;
-            pricef.Content = "$ "+price;
+            pricef.Content = price;
             bindf.Content = Company + " " + model;
             pValue.Content = "#" + (uid_ + counter);
 
