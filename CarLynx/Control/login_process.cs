@@ -39,6 +39,7 @@ namespace CarLynx.Control
             ds = handler.getstock_querry(querry);
             userNAme = ds.Tables[0].Rows[0]["Username"].ToString();
 
+
             
 
         }
