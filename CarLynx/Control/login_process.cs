@@ -29,7 +29,7 @@ namespace CarLynx.Control
         }
 
 
-        public string userNAme,passwd,name,conNumber;
+        public string userNAme,passwd,name,conNumber,address;
         public void user_retrive() 
         
         {
@@ -38,9 +38,11 @@ namespace CarLynx.Control
             DataSet ds = new DataSet();
             ds = handler.getstock_querry(querry);
             userNAme = ds.Tables[0].Rows[0]["Username"].ToString();
+            name = ds.Tables[0].Rows[0]["Username"].ToString();
 
 
-            
+
+
 
         }
         
