@@ -450,11 +450,10 @@ namespace CarLynx
         {
 
             purchase_handler ph = new purchase_handler();
-            Console.WriteLine("IN");
+
             counter++;
-            ph.purchase_do("#" + (counter+100000), uid_, car_id_rented);
-            Console.WriteLine("IN 2");
-            
+            ph.purchase_do("#" + (counter+100000), uid_, car_id_rented,modf.Content.ToString(),comf.Content.ToString(),yearf.Content.ToString(), pricef.Content.ToString(), unamef.Content.ToString(), namef.Content.ToString(), contactf.Content.ToString(), addrf.Content.ToString());
+
             pValue.Visibility = Visibility.Hidden;
             p_lbl.Visibility = Visibility.Hidden;
             image_fill.Visibility = Visibility.Hidden;
