@@ -28,13 +28,14 @@ namespace CarLynx
     {
         private bool isdone = false;
         stock_handler handler;
-        public int counter = 345234;
+        public int counter ;
         public MainWindow()
         {
             InitializeComponent();
             handler = new stock_handler();
             this.DataContext = this;
             this.purchase_info1.DataContext = this;
+            counter = handler.get_purchase_count()+1;
         }
 
 
@@ -450,9 +451,10 @@ namespace CarLynx
 
             purchase_handler ph = new purchase_handler();
             Console.WriteLine("IN");
-            ph.purchase_do("#" + (uid_ + counter), uid_, car_id_rented);
-            Console.WriteLine("IN 2");
             counter++;
+            ph.purchase_do("#" + (counter+100000), uid_, car_id_rented);
+            Console.WriteLine("IN 2");
+            
             pValue.Visibility = Visibility.Hidden;
             p_lbl.Visibility = Visibility.Hidden;
             image_fill.Visibility = Visibility.Hidden;

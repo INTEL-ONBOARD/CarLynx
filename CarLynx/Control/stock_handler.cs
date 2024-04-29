@@ -11,6 +11,7 @@ using CarLynx;
 using System.Security.Cryptography;
 using System.Windows.Controls.Primitives;
 using System.IO;
+using System.Runtime.CompilerServices;
 
 namespace CarLynx.Control
 {
@@ -114,11 +115,20 @@ namespace CarLynx.Control
             bool isaccpeted = handler.query_executer(query);
             if (isaccpeted) { return true; } else { return false; }
         }
+        // this is for to get the latest id from the database : stock
         public int get_stock_count()
         {
             int last_id = handler.query_executer_reader_id("SELECT TOP 1 * FROM car_stock ORDER BY car_id DESC;");
 
             if (last_id >= 0) { return last_id; }else{  return 0; }
+
+        }
+        // this is for to get the latest id from the database : purchases
+        public int get_purchase_count()
+        {
+            int last_id_purchase = handler.query_executer_reader_id("SELECT TOP 1 * FROM purchases ORDER BY purchase_id DESC;");
+
+            if (last_id_purchase >= 0) { return last_id_purchase; } else { return 0; }
 
         }
 
