@@ -463,5 +463,10 @@ namespace CarLynx
             purchase_info2.Visibility = Visibility.Visible;
             purchase_info1.Visibility = Visibility.Hidden;
         }
+
+        private void getReceipt(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
