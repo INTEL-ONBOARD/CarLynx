@@ -958,7 +958,7 @@
             </Image>
 
 
-            <Grid x:Name="purchase_info1" Margin="36,63,654,37" Visibility="Hidden">
+            <Grid x:Name="purchase_info1" Margin="36,63,654,37" Visibility="Visible">
 
 
                 <Image HorizontalAlignment="Left" Height="20" Margin="50,32,0,0" VerticalAlignment="Top" Width="20" Source="/View/moving-truck.png"/>
@@ -1116,7 +1116,7 @@
 
 
 
-            <Grid x:Name="purchase_info2" Margin="345,63,345,37" Visibility="Visible">
+            <Grid x:Name="purchase_info2" Margin="345,63,345,37" Visibility="Hidden">
 
 
                 <Image HorizontalAlignment="Left" Height="154" Margin="142,75,0,0" VerticalAlignment="Top" Width="165" Source="/View/bag.png"/>
