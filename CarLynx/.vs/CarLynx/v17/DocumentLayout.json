@@ -3,32 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|c:\\users\\viman\\onedrive\\desktop\\gui\\gad cw\\carlynx\\model\\dbhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:model\\dbhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\control\\login_process.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:control\\login_process.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\control\\stock_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|c:\\users\\viman\\onedrive\\desktop\\gui\\gad cw\\carlynx\\control\\stock_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:control\\stock_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\control\\purchase_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:control\\purchase_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\model\\dbhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:model\\dbhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\view\\car_product.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\car_product.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\view\\car_product.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\car_product.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\control\\purchase_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:control\\purchase_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -42,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -70,13 +74,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 0,
+              "Title": "login_process.cs",
+              "DocumentMoniker": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\Control\\login_process.cs",
+              "RelativeDocumentMoniker": "Control\\login_process.cs",
+              "ToolTip": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\Control\\login_process.cs",
+              "RelativeToolTip": "Control\\login_process.cs",
+              "ViewState": "AQIAABgAAAAAAAAAAAAYwCgAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-29T06:23:36.987Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "stock_handler.cs",
+              "DocumentMoniker": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\Control\\stock_handler.cs",
+              "RelativeDocumentMoniker": "Control\\stock_handler.cs",
+              "ToolTip": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\Control\\stock_handler.cs",
+              "RelativeToolTip": "Control\\stock_handler.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAqwB0AAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-28T15:58:36.204Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "car_product.xaml.cs",
               "DocumentMoniker": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\View\\car_product.xaml.cs",
               "RelativeDocumentMoniker": "View\\car_product.xaml.cs",
               "ToolTip": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\View\\car_product.xaml.cs",
               "RelativeToolTip": "View\\car_product.xaml.cs",
-              "ViewState": "AQIAAE4AAAAAAAAAAAAAAGgAAAA/AAAA",
+              "ViewState": "AQIAADIAAAAAAAAAAAAmwGgAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-28T16:35:49.679Z"
             },
@@ -88,25 +118,25 @@
               "RelativeDocumentMoniker": "View\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\View\\MainWindow.xaml.cs",
               "RelativeToolTip": "View\\MainWindow.xaml.cs",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAowCoAAAAtAAAA",
+              "ViewState": "AQIAAJAAAAAAAAAAAAAAACoAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-24T10:30:43.373Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "purchase_handler.cs",
               "DocumentMoniker": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\Control\\purchase_handler.cs",
               "RelativeDocumentMoniker": "Control\\purchase_handler.cs",
               "ToolTip": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\Control\\purchase_handler.cs",
               "RelativeToolTip": "Control\\purchase_handler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-28T22:59:29.05Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\View\\MainWindow.xaml",
               "RelativeDocumentMoniker": "View\\MainWindow.xaml",
@@ -117,32 +147,19 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "stock_handler.cs",
-              "DocumentMoniker": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\Control\\stock_handler.cs",
-              "RelativeDocumentMoniker": "Control\\stock_handler.cs",
-              "ToolTip": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\Control\\stock_handler.cs",
-              "RelativeToolTip": "Control\\stock_handler.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABgAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T15:58:36.204Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Dbhandler.cs",
               "DocumentMoniker": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\Model\\Dbhandler.cs",
               "RelativeDocumentMoniker": "Model\\Dbhandler.cs",
               "ToolTip": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\Model\\Dbhandler.cs",
               "RelativeToolTip": "Model\\Dbhandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAD4AAAAdAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADYAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T21:37:40.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-28T21:37:40.926Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
@@ -153,7 +170,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "car_product.xaml",
               "DocumentMoniker": "C:\\Users\\viman\\OneDrive\\Desktop\\GUI\\GAD CW\\CarLynx\\View\\car_product.xaml",
               "RelativeDocumentMoniker": "View\\car_product.xaml",
