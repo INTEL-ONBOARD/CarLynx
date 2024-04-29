@@ -934,7 +934,7 @@
         </Grid>
 
         <!--THIS IS THE VIEW FOR PURCHASE SCREEN-->
-        <Grid x:Name="purchase_view" Margin="44,52,36,25" Grid.RowSpan="2" Visibility="Hidden">
+        <Grid x:Name="purchase_view" Margin="44,52,36,25" Grid.RowSpan="2" Visibility="Visible">
             <Grid.Background>
                 <SolidColorBrush Color="Black" Opacity="0.0"/>
             </Grid.Background>
@@ -958,7 +958,7 @@
             </Image>
 
 
-            <Grid x:Name="purchase_info1" Margin="36,63,654,37" Visibility="Visible">
+            <Grid x:Name="purchase_info1" Margin="36,63,654,37" Visibility="Hidden">
 
 
                 <Image HorizontalAlignment="Left" Height="20" Margin="50,32,0,0" VerticalAlignment="Top" Width="20" Source="/View/moving-truck.png"/>
@@ -1116,7 +1116,7 @@
 
 
 
-            <Grid x:Name="purchase_info2" Margin="345,63,345,37" Visibility="Hidden">
+            <Grid x:Name="purchase_info2" Margin="345,63,345,37" Visibility="Visible">
 
 
                 <Image HorizontalAlignment="Left" Height="154" Margin="142,75,0,0" VerticalAlignment="Top" Width="165" Source="/View/bag.png"/>
@@ -1146,7 +1146,7 @@
                         <SolidColorBrush Opacity="0.8"/>
                     </Label.Background>
                 </Label>
-                <Button x:Name="_continue" Content="Download payment reciept " Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" Width="188" Margin="0,331,0,0" Background="{x:Null}" Padding="1,1,1,15" Click="gotousersAction">
+                <Button x:Name="_continue" Content="Download payment reciept " Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" Width="188" Margin="0,331,0,0" Background="{x:Null}" Padding="1,1,1,15" Click="getReceipt">
                     <Button.BorderBrush>
                         <SolidColorBrush Color="#FF707070" Opacity="0.4"/>
                     </Button.BorderBrush>
