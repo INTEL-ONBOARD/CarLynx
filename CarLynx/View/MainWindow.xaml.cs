@@ -27,15 +27,14 @@ namespace CarLynx
     public partial class MainWindow : Window
     {
         private bool isdone = false;
-        stock_handler handler;
+        stock_handler handler = new stock_handler();
         public int counter ;
         public MainWindow()
         {
             InitializeComponent();
-            handler = new stock_handler();
             this.DataContext = this;
             this.purchase_info1.DataContext = this;
-            counter = handler.get_purchase_count()+1;
+            counter = handler.get_purchase_count();
         }
 
 
@@ -62,7 +61,7 @@ namespace CarLynx
             yearf.Content = year;
             pricef.Content = price;
             bindf.Content = Company + " " + model;
-            pValue.Content = "#" + (uid_ + counter);
+            pValue.Content =(counter+1);
 
         }
 
@@ -448,14 +447,16 @@ namespace CarLynx
 
         private void purchaseNow(object sender, RoutedEventArgs e)
         {
-
             purchase_handler ph = new purchase_handler();
 
+            // Increment counter before using it
             counter++;
+            
+            // Use the counter for purchase ID
+            string purchaseId = counter.ToString();
 
-            string pattern = "\\$";
-
-            ph.purchase_do("#" + (counter+100000), uid_, car_id_rented,modf.Content.ToString(),comf.Content.ToString(),yearf.Content.ToString(), Regex.Replace(pricef.Content.ToString(), pattern, "") , unamef.Content.ToString(), namef.Content.ToString(), contactf.Content.ToString(), addrf.Content.ToString());
+            pValue.Content = purchaseId;
+            ph.purchase_do(purchaseId, uid_, car_id_rented, modf.Content.ToString(), comf.Content.ToString(), yearf.Content.ToString(), Regex.Replace(pricef.Content.ToString(), "\\$", ""), unamef.Content.ToString(), namef.Content.ToString(), contactf.Content.ToString(), addrf.Content.ToString());
 
             pValue.Visibility = Visibility.Hidden;
             p_lbl.Visibility = Visibility.Hidden;
@@ -465,6 +466,7 @@ namespace CarLynx
             purchase_info2.Visibility = Visibility.Visible;
             purchase_info1.Visibility = Visibility.Hidden;
         }
+
 
         private void getReceipt(object sender, RoutedEventArgs e)
         {

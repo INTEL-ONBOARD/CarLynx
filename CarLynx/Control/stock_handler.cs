@@ -126,8 +126,7 @@ namespace CarLynx.Control
         // this is for to get the latest id from the database : purchases
         public int get_purchase_count()
         {
-            int last_id_purchase = handler.query_executer_reader_id("SELECT TOP 1 * FROM purchases ORDER BY purchase_id DESC;");
-
+            int last_id_purchase = handler.query_executer_reader_id("SELECT TOP 1 * FROM report_ ORDER BY purchase_id DESC;");
             if (last_id_purchase >= 0) { return last_id_purchase; } else { return 0; }
 
         }
@@ -145,8 +144,7 @@ namespace CarLynx.Control
                 win.contact_ = row["contact"].ToString();
                 win.address_ = row["address"].ToString();
                 win.age_ = row["age"].ToString();
-
-                Console.WriteLine(win.username_);
+                //Console.WriteLine(win.username_);
             }
         }
 

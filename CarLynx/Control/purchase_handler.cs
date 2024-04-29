@@ -14,7 +14,7 @@ namespace CarLynx.Control
 
             Dbhandler handler = new Dbhandler();
             String query = "INSERT INTO report_ (purchase_id, user_id, car_id, car_model, car_manufacture, car_year, car_price, username, name, contact, address) VALUES ('" + pid + "','" + uid + "','" + cid + "','" + car_model + "','" + car_manu + "','" + car_year + "','" + car_price + "','" + username + "','" + name + "','" + contact + "','" + addr + "')";
-
+            Console.WriteLine(query);
             if (handler.query_executer(query)) { return true; } else { return false; }
         }
     }

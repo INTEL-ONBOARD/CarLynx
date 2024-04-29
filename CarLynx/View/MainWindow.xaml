@@ -1170,7 +1170,7 @@
 
 
             <Label x:Name="p_lbl" Content="Purchase ID " HorizontalAlignment="Left" Margin="910,50,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" FontFamily="Bahnschrift"/>
-            <Label x:Name="pValue" Content="" HorizontalAlignment="Left" Margin="898,82,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="18" FontFamily="Bahnschrift" Width="76">
+            <Label x:Name="pValue" Content="" HorizontalAlignment="Left" Margin="966,89,0,0" VerticalAlignment="Top" HorizontalContentAlignment="Right" VerticalContentAlignment="Center" FontSize="18" FontFamily="Bahnschrift" Width="76">
                 <Label.Foreground>
                     <SolidColorBrush Color="Black" Opacity="0.6"/>
                 </Label.Foreground>
