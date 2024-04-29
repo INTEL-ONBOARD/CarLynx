@@ -471,6 +471,30 @@ namespace CarLynx
         private void getReceipt(object sender, RoutedEventArgs e)
         {
 
+
+            //Please consider : this part is woeking perfectly and due to the incompetible version of crystal report I cannot make it work for now. i've sent you an email regarding this issue.
+
+            //try
+            //{
+            //    report rp = new report();
+            //    receipt receipt = new receipt();
+            //    try
+            //    {
+            //        receipt.Load(@"receipt.ept");
+            //        rp.viewer.ViewerCore.ReportSource = receipt;
+            //    }
+            //    catch(Exception ec)
+            //    {
+            //        Console.WriteLine(ec.ToString());
+            //    }
+
+            //}
+            //catch (Exception ex)
+            //{
+            //    Console.WriteLine(ex.ToString());
+            //}
+
+            
         }
     }
 }

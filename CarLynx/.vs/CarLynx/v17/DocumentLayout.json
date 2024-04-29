@@ -3,32 +3,44 @@
   "WorkspaceRootPath": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|c:\\users\\wenuj\\source\\repos\\carlynx\\carlynx\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\view\\car_product.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\car_product.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|c:\\users\\wenuj\\source\\repos\\carlynx\\carlynx\\control\\stock_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|c:\\users\\wenuj\\source\\repos\\carlynx\\carlynx\\receipt.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}",
+      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:receipt.rpt||{C0EF7560-990E-4D61-B970-65A6096B6866}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\control\\stock_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:control\\stock_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\view\\car_product.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\car_product.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\model\\dbhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:model\\dbhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\control\\purchase_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:control\\purchase_handler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\view\\car_product.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\car_product.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\view\\car_product.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\car_product.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|c:\\users\\wenuj\\source\\repos\\carlynx\\carlynx\\control\\login_process.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:control\\login_process.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|c:\\users\\wenuj\\source\\repos\\carlynx\\carlynx\\view\\report.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:view\\report.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\model\\dbhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|solutionrelative:model\\dbhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AFF55E21-5226-40B5-81F2-BC0DD933CEE1}|CarLynx.csproj|C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -42,11 +54,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 15,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "stock_handler.cs",
               "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\Control\\stock_handler.cs",
               "RelativeDocumentMoniker": "Control\\stock_handler.cs",
@@ -81,27 +93,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "receipt.rpt",
+              "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\receipt.rpt",
+              "RelativeDocumentMoniker": "receipt.rpt",
+              "ToolTip": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\receipt.rpt",
+              "RelativeToolTip": "receipt.rpt",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIdSURBVDhPpZJNaBNBFMf/M7ub2NhajSDiwS96CbY2BykojaD0oF5s0YPgQYReLHgpeNCLYv0AexNRb1VUAkJcPXgQEUG89BIaxI9gqzGxH6QmXTef3Wx2nJkmNev25g8ebx7z3n/ezBv8F4wx0lhK7j6fYo3lmowMhl35HoRA3XGk/YvYW\u002BsA2vCrUEIwu1hEJltwmeDc8V5Plx4BAaXEY4J7LxLSt4q4BBS6Eiq8oGm3nXHZ1VCkS9pgfxc62/0yT\u002BASaNRLIWE6ieHB3H1EZsMyVhUKTXU37Yo0RZFeVQiuL14D1tnooBtQcEwcSO9d7aoVdefw5yFC2GG\u002BDsa/OTj228LYwmXejYrkzxkUsqZMNG0TfZkexA99lHETUqlYJ0rV5YEPqfKOG7Glo3MGRSTkx2T4JNp2\u002BzGfmMf3JzNAHijHarJIfz\u002BN0wMh2QoduRrVL9x6NqrWzUt3hjfjYMiHV1NVWNHHCJAOoMof3OBOt10T8XD24kOiv0uynFFkp8ZTrPv8NNs3\u002BpXtifawUmWZWbU6q9l16Z\u002B\u002BTXrHOHHzDPP7ND6iNvSHAtjYrkLTNDzqfQleBIU/rDhdeI1Po4l7JpyqDSTSDoKdPmwLqqhaNdh2vbHrxXWhidcZ9mXBj3yJYr3Pwf7tBnL5HLZu2YRA4O/nERzp2yVrXQJiIhWrdsUwy92/lorZyURqLP4p/YZv/eBXLK9ktQL8AbhJ7xVosbKmAAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-04-29T17:04:26.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "View\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\MainWindow.xaml.cs",
+              "RelativeToolTip": "View\\MainWindow.xaml.cs",
+              "ViewState": "AQIAANABAAAAAAAAAAAgwNsBAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-24T10:30:43.373Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "car_product.xaml.cs",
               "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\car_product.xaml.cs",
               "RelativeDocumentMoniker": "View\\car_product.xaml.cs",
               "ToolTip": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\car_product.xaml.cs",
               "RelativeToolTip": "View\\car_product.xaml.cs",
-              "ViewState": "AQIAAEgAAAAAAAAAAAA6wFgAAAAAAAAA",
+              "ViewState": "AQIAAEYAAAAAAAAAAAAUwGgAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-04-28T16:35:49.679Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\MainWindow.xaml.cs",
-              "RelativeDocumentMoniker": "View\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\MainWindow.xaml.cs",
-              "RelativeToolTip": "View\\MainWindow.xaml.cs",
-              "ViewState": "AQIAACEAAAAAAAAAAAAuwD8AAAAnAAAA",
+              "DocumentIndex": 8,
+              "Title": "report.xaml",
+              "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\report.xaml",
+              "RelativeDocumentMoniker": "View\\report.xaml",
+              "ToolTip": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\report.xaml",
+              "RelativeToolTip": "View\\report.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-29T16:15:20.805Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "login_process.cs",
+              "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\Control\\login_process.cs",
+              "RelativeDocumentMoniker": "Control\\login_process.cs",
+              "ToolTip": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\Control\\login_process.cs",
+              "RelativeToolTip": "Control\\login_process.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACAAAAAjAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-24T10:30:43.373Z",
+              "WhenOpened": "2024-04-29T16:50:47.857Z",
               "EditorCaption": ""
             },
             {
@@ -119,19 +168,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "View\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\MainWindow.xaml",
-              "RelativeToolTip": "View\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2024-04-26T21:59:17.572Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "Dbhandler.cs",
               "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\Model\\Dbhandler.cs",
               "RelativeDocumentMoniker": "Model\\Dbhandler.cs",
@@ -139,12 +176,11 @@
               "RelativeToolTip": "Model\\Dbhandler.cs",
               "ViewState": "AQIAAEUAAAAAAAAAAAAswDYAAAAbAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-28T21:37:40.926Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-04-28T21:37:40.926Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
@@ -156,7 +192,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "car_product.xaml",
               "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\car_product.xaml",
               "RelativeDocumentMoniker": "View\\car_product.xaml",
@@ -164,6 +200,39 @@
               "RelativeToolTip": "View\\car_product.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-04-28T22:14:23.993Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "3da63a0f-8f16-44cc-b6c9-3270a18265ac",
+        "Display": 0,
+        "X": 32,
+        "Y": 71,
+        "Width": 1882,
+        "Height": 956,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "View\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\wenuj\\source\\repos\\CarLynx\\CarLynx\\View\\MainWindow.xaml",
+              "RelativeToolTip": "View\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-04-26T21:59:17.572Z",
               "EditorCaption": ""
             }
           ]

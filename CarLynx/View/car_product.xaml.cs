@@ -90,12 +90,8 @@ namespace CarLynx.View
             stock_handler sh = new stock_handler();
             sh.user_dump(uid ,win);
             
-
             win.binder("C:/Users/wenuj/source/repos/CarLynx/CarLynx/Resources/Car_models/" + model + ".jpg",Company,model,price,year );
             
-
-
-
             win.pValue.Visibility = Visibility.Visible;
             win.p_lbl.Visibility = Visibility.Visible;
             win.image_fill.Visibility = Visibility.Visible;

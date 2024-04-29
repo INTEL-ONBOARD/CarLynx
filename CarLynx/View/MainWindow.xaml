@@ -1146,7 +1146,7 @@
                         <SolidColorBrush Opacity="0.8"/>
                     </Label.Background>
                 </Label>
-                <Button x:Name="_continue" Content="Download payment reciept " Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" Width="188" Margin="0,331,0,0" Background="{x:Null}" Padding="1,1,1,15" Click="getReceipt">
+                <Button x:Name="download" Content="Download payment reciept " Style="{StaticResource btncutsomstyle}" Cursor="Hand" HorizontalAlignment="Center" VerticalAlignment="Top" Height="25" Width="188" Margin="0,331,0,0" Background="{x:Null}" Padding="1,1,1,15" Click="getReceipt">
                     <Button.BorderBrush>
                         <SolidColorBrush Color="#FF707070" Opacity="0.4"/>
                     </Button.BorderBrush>
