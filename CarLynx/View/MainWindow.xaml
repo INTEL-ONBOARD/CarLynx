@@ -918,7 +918,7 @@
 
 
         <!--THIS IS THE VIEW FOR USER PROFILE SCREEN-->
-        <Grid x:Name="profile_view" Margin="44,52,36,25" Grid.RowSpan="2" Visibility="Visible" Background="#00000000">
+        <Grid x:Name="profile_view" Margin="44,52,36,25" Grid.RowSpan="2" Visibility="Hidden" Background="#00000000">
 
             <Button x:Name="backBtn_profile" Style="{StaticResource btncutsomstyle}" Content="" HorizontalAlignment="Left" Margin="22,22,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="28" Height="28" Click="backEvent_profile">
                 <Button.Background>
