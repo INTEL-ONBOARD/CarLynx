@@ -455,14 +455,9 @@ namespace CarLynx
 
            
             purchase_handler ph = new purchase_handler();
-            handler.get_purchase_count(this);
-            int bin = Convert.ToInt32(counter);
-            bin++;
 
-            string purchaseId = bin.ToString();
-            Console.WriteLine("sent >" + purchaseId);
-            
-            ph.purchase_do(purchaseId, uid_, car_id_rented, modf.Content.ToString(), comf.Content.ToString(), yearf.Content.ToString(), Regex.Replace(pricef.Content.ToString(), "\\$", ""), unamef.Content.ToString(), namef.Content.ToString(), contactf.Content.ToString(), addrf.Content.ToString());
+            handler.get_purchase_count(this);
+            ph.purchase_do(uid_, car_id_rented, modf.Content.ToString(), comf.Content.ToString(), yearf.Content.ToString(), Regex.Replace(pricef.Content.ToString(), "\\$", ""), unamef.Content.ToString(), namef.Content.ToString(), contactf.Content.ToString(), addrf.Content.ToString());
 
             pValue.Visibility = Visibility.Hidden;
             p_lbl.Visibility = Visibility.Hidden;

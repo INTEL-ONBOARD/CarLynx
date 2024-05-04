@@ -131,11 +131,12 @@ namespace CarLynx.Control
             //if (last_id_purchase >= 0) { return last_id_purchase; } else { return 0; }
 
             DataSet stock = new DataSet();
-            stock = handler.getstock_querry("SELECT TOP 1 * FROM purchase ORDER BY purchase_id DESC;");
+            stock = handler.getstock_querry("SELECT TOP 1 purchase_id FROM purchases ORDER BY purchase_id DESC;");
             if (stock != null) {
                 foreach (DataRow row in stock.Tables[0].Rows)
                 {
                     win.counter = row["purchase_id"].ToString();
+                    win.pValue.Content = (Convert.ToInt32( win.counter) + 1).ToString();
 
                 }
             }
