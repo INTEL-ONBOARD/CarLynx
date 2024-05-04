@@ -458,7 +458,7 @@ namespace CarLynx
 
             handler.get_purchase_count(this);
             ph.purchase_do(uid_, car_id_rented, modf.Content.ToString(), comf.Content.ToString(), yearf.Content.ToString(), Regex.Replace(pricef.Content.ToString(), "\\$", ""), unamef.Content.ToString(), namef.Content.ToString(), contactf.Content.ToString(), addrf.Content.ToString());
-
+            ph.receipt_update_do(pValue.Content.ToString(),uid_, car_id_rented, modf.Content.ToString(), comf.Content.ToString(), yearf.Content.ToString(), Regex.Replace(pricef.Content.ToString(), "\\$", ""), unamef.Content.ToString(), namef.Content.ToString(), contactf.Content.ToString(), addrf.Content.ToString());
             pValue.Visibility = Visibility.Hidden;
             p_lbl.Visibility = Visibility.Hidden;
             image_fill.Visibility = Visibility.Hidden;
@@ -473,27 +473,31 @@ namespace CarLynx
         {
 
 
+
+
             //Please consider : this part is woeking perfectly and due to the incompetible version of crystal report I cannot make it work for now. i've sent you an email regarding this issue.
 
-            //try
-            //{
-            //    report rp = new report();
-            //    receipt receipt = new receipt();
-            //    try
-            //    {
-            //        receipt.Load(@"receipt.ept");
-            //        rp.viewer.ViewerCore.ReportSource = receipt;
-            //    }
-            //    catch(Exception ec)
-            //    {
-            //        Console.WriteLine(ec.ToString());
-            //    }
+            try
+            {
+                receiptWindow rec = new receiptWindow();
+                rec.Show();
+                receipt receipt = new receipt();
+                try
+                {
+                  receipt.Load(@"receipt.ept");
+                  receipt.Refresh();
+                  rec.reportViewer.ViewerCore.ReportSource = receipt;
+                }
+                catch(Exception ec)
+                {
+                    Console.WriteLine(ec.ToString());
+                }
 
-            //}
-            //catch (Exception ex)
-            //{
-            //    Console.WriteLine(ex.ToString());
-            //}
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
 
             
         }

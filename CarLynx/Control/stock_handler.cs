@@ -137,7 +137,6 @@ namespace CarLynx.Control
                 {
                     win.counter = row["purchase_id"].ToString();
                     win.pValue.Content = (Convert.ToInt32( win.counter) + 1).ToString();
-
                 }
             }
             else
