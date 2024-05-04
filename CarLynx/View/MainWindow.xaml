@@ -551,7 +551,7 @@
                 <!--<Button Style="{StaticResource RoundButtonStyle}" Content="Login" Margin="68,366,68,78" Background="{x:Null}" Cursor="Hand"/>-->
                 <TextBox x:Name="uname" Style="{StaticResource CustomTextBoxStyle}" Margin="0,69,0,0" TextWrapping="Wrap" Tag="username@gmail.com" Width="254" Height="55" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" TextChanged="recheck" />
                 <TextBox x:Name="pwd" Style="{StaticResource CustomTextBoxStyle}" TextWrapping="Wrap" Tag="*******" Width="254" Height="55" Background="{x:Null}" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" BorderBrush="#FFD2D2D2" FontSize="14" Margin="0,154,0,0" TextChanged="recheck" />
-                <Button x:Name="exitBtn_Copy" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Center" Margin="0,237,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="50" Height="50" Click="loginAction">
+                <Button  x:Name="exitBtn_Copy" Style="{StaticResource ImageButtonStyle}" Content="" HorizontalAlignment="Center" Margin="0,237,0,0" Cursor="Hand" VerticalAlignment="Top" BorderBrush="{x:Null}" Foreground="{x:Null}" Width="50" Height="50" Click="loginAction">
                     <Button.Background>
                         <ImageBrush ImageSource="/View/login.png" TileMode="None" Stretch="UniformToFill">
                             <ImageBrush.RelativeTransform>

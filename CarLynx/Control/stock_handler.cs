@@ -12,6 +12,7 @@ using System.Security.Cryptography;
 using System.Windows.Controls.Primitives;
 using System.IO;
 using System.Runtime.CompilerServices;
+using System.Reflection;
 
 namespace CarLynx.Control
 {
@@ -124,10 +125,24 @@ namespace CarLynx.Control
 
         }
         // this is for to get the latest id from the database : purchases
-        public int get_purchase_count()
+        public void get_purchase_count(MainWindow win)
         {
-            int last_id_purchase = handler.query_executer_reader_id("SELECT TOP 1 * FROM report_ ORDER BY purchase_id DESC;");
-            if (last_id_purchase >= 0) { return last_id_purchase; } else { return 0; }
+            //int last_id_purchase = handler.query_executer_reader_id("SELECT TOP 1 * FROM purchase ORDER BY purchase_id DESC;");
+            //if (last_id_purchase >= 0) { return last_id_purchase; } else { return 0; }
+
+            DataSet stock = new DataSet();
+            stock = handler.getstock_querry("SELECT TOP 1 * FROM purchase ORDER BY purchase_id DESC;");
+            if (stock != null) {
+                foreach (DataRow row in stock.Tables[0].Rows)
+                {
+                    win.counter = row["purchase_id"].ToString();
+
+                }
+            }
+            else
+            {
+                win.counter = 0.ToString();
+            }
 
         }
 
@@ -147,6 +162,7 @@ namespace CarLynx.Control
                 //Console.WriteLine(win.username_);
             }
         }
+        
 
 
 

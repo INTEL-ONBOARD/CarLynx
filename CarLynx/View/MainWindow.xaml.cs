@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -28,13 +29,14 @@ namespace CarLynx
     {
         private bool isdone = false;
         stock_handler handler = new stock_handler();
-        public int counter ;
+        public String counter ;
         public MainWindow()
         {
             InitializeComponent();
             this.DataContext = this;
             this.purchase_info1.DataContext = this;
-            counter = handler.get_purchase_count();
+            handler.get_purchase_count(this);
+            Console.WriteLine("Home mode >" + counter.ToString());
         }
 
 
@@ -126,6 +128,8 @@ namespace CarLynx
 
         private void gostoreAction(object sender, RoutedEventArgs e)
         {
+            handler.get_purchase_count(this);
+            Console.WriteLine("store mode >"+counter.ToString());
             store_view.Visibility = Visibility.Visible;
             home_default_admin.Visibility = Visibility.Hidden;
             itemView.Content = panelView;
@@ -221,6 +225,7 @@ namespace CarLynx
             manage_category_view.Visibility = Visibility.Hidden;
             manage_car_stock_view.Visibility = Visibility.Visible;
             manage_user_view.Visibility = Visibility.Hidden;
+
         }
 
         private void gotousersAction(object sender, RoutedEventArgs e)
@@ -447,15 +452,16 @@ namespace CarLynx
 
         private void purchaseNow(object sender, RoutedEventArgs e)
         {
+
+           
             purchase_handler ph = new purchase_handler();
+            handler.get_purchase_count(this);
+            int bin = Convert.ToInt32(counter);
+            bin++;
 
-            // Increment counter before using it
-            counter++;
+            string purchaseId = bin.ToString();
+            Console.WriteLine("sent >" + purchaseId);
             
-            // Use the counter for purchase ID
-            string purchaseId = counter.ToString();
-
-            pValue.Content = purchaseId;
             ph.purchase_do(purchaseId, uid_, car_id_rented, modf.Content.ToString(), comf.Content.ToString(), yearf.Content.ToString(), Regex.Replace(pricef.Content.ToString(), "\\$", ""), unamef.Content.ToString(), namef.Content.ToString(), contactf.Content.ToString(), addrf.Content.ToString());
 
             pValue.Visibility = Visibility.Hidden;
