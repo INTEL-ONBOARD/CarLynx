@@ -517,5 +517,30 @@ namespace CarLynx
 
             
         }
+
+        private void get_stock_report(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                stockwindow rec = new stockwindow();
+                rec.Show();
+                stock st = new stock();
+                try
+                {
+                    st.Load(@"stock.ept");
+                    st.Refresh();
+                    rec.stockView.ViewerCore.ReportSource = st;
+                }
+                catch (Exception ec)
+                {
+                    Console.WriteLine(ec.ToString());
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+        }
     }
 }

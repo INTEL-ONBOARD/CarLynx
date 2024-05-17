@@ -1,0 +1,68 @@
+﻿<Window 
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CarLynx.View"
+        xmlns:Viewer="clr-namespace:SAPBusinessObjects.WPF.Viewer;assembly=SAPBusinessObjects.WPF.Viewer" x:Class="CarLynx.View.receiptWindow"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen"
+        Title="receiptWindow" Height="772" Width="907">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}" x:Key="RoundButtonStyle">
+
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" CornerRadius="10" Background="{TemplateBinding Background}"
+                BorderBrush="{TemplateBinding BorderBrush}"
+                BorderThickness="{TemplateBinding BorderThickness}"
+                RenderTransformOrigin="0.5,0.5">
+                            <Border.RenderTransform>
+                                <ScaleTransform ScaleX="1" ScaleY="1"/>
+                            </Border.RenderTransform>
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Trigger.EnterActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                             Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                             To="0.9" Duration="0:0:0.3"/>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                             Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                             To="0.9" Duration="0:0:0.3"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.EnterActions>
+                                <Trigger.ExitActions>
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                             Storyboard.TargetProperty="RenderTransform.ScaleX"
+                                             To="1" Duration="0:0:0.3"/>
+                                            <DoubleAnimation Storyboard.TargetName="border"
+                                             Storyboard.TargetProperty="RenderTransform.ScaleY"
+                                             To="1" Duration="0:0:0.3"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </Trigger.ExitActions>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+
+        <Viewer:CrystalReportsViewer x:Name="stockViewer" ShowToggleSidePanelButton="False" ShowStatusbar="False" ShowSearchTextButton="False" ShowToolbar="False" ShowPrevPageButton="False" ShowNextPageButton="False" ShowLogo="False" ShowExportButton="False" ShowGoToPageButton="False" ShowCopyButton="False" ShowRefreshButton="False" ShowPrintButton="False" ToggleSidePanel="None" RenderTransformOrigin="-50,0" MatchWholeWord="False" Margin="0,-62,0,0" Height="695" VerticalAlignment="Top"/>
+        <Button Cursor="Hand" Panel.ZIndex="1" Style="{StaticResource RoundButtonStyle}" HorizontalAlignment="Center" Margin="0,645,0,0" VerticalAlignment="Top" Height="109" Width="100" BorderBrush="{x:Null}" Background="{x:Null}" Click="EXIT">
+            <Image Height="99" Width="91" Source="/View/check-circle.png"/>
+        </Button>
+
+    </Grid>
+</Window>

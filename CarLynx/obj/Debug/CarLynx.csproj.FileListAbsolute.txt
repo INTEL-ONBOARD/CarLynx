@@ -55,3 +55,5 @@ C:\Users\wenuj\source\repos\CarLynx\CarLynx\obj\Debug\View\report.baml
 C:\Users\wenuj\source\repos\CarLynx\CarLynx\obj\Debug\CarLynx.csproj.Up2Date
 C:\Users\wenuj\source\repos\CarLynx\CarLynx\obj\Debug\View\receiptWindow.g.cs
 C:\Users\wenuj\source\repos\CarLynx\CarLynx\obj\Debug\View\receiptWindow.baml
+C:\Users\wenuj\source\repos\CarLynx\CarLynx\obj\Debug\View\stockwindow.g.cs
+C:\Users\wenuj\source\repos\CarLynx\CarLynx\obj\Debug\View\stockwindow.baml

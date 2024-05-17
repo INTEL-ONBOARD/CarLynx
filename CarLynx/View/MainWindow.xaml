@@ -641,8 +641,6 @@
         </Grid>
 
 
-
-
         <!--THIS IS THE VIEW FOR HOME SCREEN-->
         <Grid x:Name="home_default_admin" Margin="44,52,36,25" Visibility="Hidden" Grid.RowSpan="2">
             <Grid.Background>
@@ -707,7 +705,6 @@
             </Button>
 
         </Grid>
-
 
 
         <!--THIS IS THE VIEW FOR STORE SCREEN-->
@@ -915,8 +912,6 @@
         </Grid>
 
 
-
-
         <!--THIS IS THE VIEW FOR USER PROFILE SCREEN-->
         <Grid x:Name="profile_view" Margin="44,52,36,25" Grid.RowSpan="2" Visibility="Hidden" Background="#00000000">
 
@@ -933,6 +928,7 @@
 
         </Grid>
 
+        
         <!--THIS IS THE VIEW FOR PURCHASE SCREEN-->
         <Grid x:Name="purchase_view" Margin="44,52,36,25" Grid.RowSpan="2" Visibility="Hidden">
             <Grid.Background>
@@ -1155,16 +1151,7 @@
                     </Button.Foreground>
 
                 </Button>
-
-
-
-
             </Grid>
-
-
-
-
-
 
 
 
@@ -1186,9 +1173,6 @@
 
 
         </Grid>
-
-
-
 
 
         <!--THIS IS THE VIEW FOR Manage SCREEN-->
@@ -1288,7 +1272,9 @@
 
                 <Grid x:Name="view_mode_view" Margin="0,82,0,0" Visibility="Hidden">
                     <Label Content="View stock and Update items mode : Upcoming patch" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
+                    <Button x:Name="getReportBtn"  Cursor="Hand" Style="{StaticResource btncutsomstyle}" HorizontalAlignment="Left" Margin="883,386,0,0" VerticalAlignment="Top" Height="40" Width="53" Background="{x:Null}"  BorderBrush="{x:Null}" Click="get_stock_report">
+                        <Image Height="29" Width="53" Source="/View/business-report.png" RenderTransformOrigin="1.651,11.069" Opacity="0.6" ToolTip="Reset"/>
+                    </Button>
                 </Grid>
 
                 <Grid x:Name="edit_mode_view" Margin="0,82,0,0" Visibility="Visible">
@@ -1474,6 +1460,7 @@
 
 
     </Grid>
+    
 </Window>
 
     

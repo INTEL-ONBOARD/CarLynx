@@ -71,11 +71,20 @@
       <DependentUpon>receipt.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="stock.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>stock.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="View\receiptWindow.xaml.cs">
       <DependentUpon>receiptWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\report.xaml.cs">
       <DependentUpon>report.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\stockwindow.xaml.cs">
+      <DependentUpon>stockwindow.xaml</DependentUpon>
     </Compile>
     <Page Include="View\car_product.xaml">
       <SubType>Designer</SubType>
@@ -108,6 +117,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="View\stockwindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -130,6 +143,10 @@
     <EmbeddedResource Include="receipt.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>receipt.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="stock.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>stock.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -273,6 +290,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="View\check-circle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="View\business-report.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
