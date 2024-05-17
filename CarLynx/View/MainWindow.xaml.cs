@@ -103,21 +103,37 @@ namespace CarLynx
         private void loginAction(object sender, RoutedEventArgs e)
         {
             login_process ps = new login_process();
-            if (uname.Text != "" && pwd.Text != "")
+            if (!uname.Text.ToString().Any(char.IsUpper))
             {
-                if (ps.login_check(uname.Text, pwd.Text)) {
-                    login_window.Visibility = Visibility.Hidden;
-                    home_default_admin.Visibility = Visibility.Visible;
-                }
-                else
+                Console.WriteLine("yeees");
+                if (uname.Text != "" && pwd.Text != "")
                 {
-                    uname.BorderBrush = Brushes.Red;
-                    pwd.BorderBrush = Brushes.Red;
-                    error_box.Visibility = Visibility.Visible;
-                    login_window.Visibility = Visibility.Visible;
-                    home_default_admin.Visibility = Visibility.Hidden;
+                    if (ps.login_check(uname.Text, pwd.Text))
+                    {
+                        login_window.Visibility = Visibility.Hidden;
+                        home_default_admin.Visibility = Visibility.Visible;
+                    }
+                    else
+                    {
+                        uname.BorderBrush = Brushes.Red;
+                        pwd.BorderBrush = Brushes.Red;
+                        error_label.Content = "Given Username or password are not valid!";
+                        error_box.Visibility = Visibility.Visible;
+                        login_window.Visibility = Visibility.Visible;
+                        home_default_admin.Visibility = Visibility.Hidden;
+                    }
                 }
             }
+            else
+            {
+                uname.BorderBrush = Brushes.Red;
+                pwd.BorderBrush = Brushes.Red;
+                error_label.Content = "Usernmae should not contain any Uppercase letters!";
+                error_box.Visibility = Visibility.Visible;
+                login_window.Visibility = Visibility.Visible;
+                home_default_admin.Visibility = Visibility.Hidden;
+            }
+
         }
 
         private void logoutAction(object sender, RoutedEventArgs e)

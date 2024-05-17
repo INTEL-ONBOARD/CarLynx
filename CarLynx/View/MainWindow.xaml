@@ -636,7 +636,7 @@
                 <Border.Background>
                     <SolidColorBrush Color="#FFF13E19" Opacity="0.1"/>
                 </Border.Background>
-                <Label Content="Given Username or password are not valid!" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                <Label x:Name="error_label" Content="Given Username or password are not valid!" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </Border>
         </Grid>
 
