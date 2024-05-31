@@ -88,6 +88,7 @@ namespace CarLynx
                 bitmap.UriSource = new Uri("C:/Users/wenuj/source/repos/CarLynx/CarLynx/Resources/Car_models/NONE.jpg", UriKind.RelativeOrAbsolute);
                 bitmap.CacheOption = BitmapCacheOption.OnLoad;
                 bitmap.EndInit();
+                
 
                 // Set the BitmapImage as the source of the Image control
                 this.image_fill.Source = bitmap;
@@ -527,7 +528,7 @@ namespace CarLynx
                 stock st = new stock();
                 try
                 {
-                    st.Load(@"stock.ept");
+                    st.Load(@"stock.ept");  
                     st.Refresh();
                     rec.stockView.ViewerCore.ReportSource = st;
                 }

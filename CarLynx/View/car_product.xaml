@@ -80,7 +80,7 @@
             </Border>
 
             <Border BorderBrush="#FFF31A37" Margin="363,294,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderThickness="3,0,3,0" Height="44">
-                <StackPanel Height="64" Width="100" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <StackPanel Height="64" Width="100" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,0,0,-10">
                     <Label Content="{Binding speed}" FontSize="16" FontWeight="Bold" Foreground="#FF6B6B6B" HorizontalContentAlignment="Center" VerticalAlignment="Center" Margin="0,10,0,0"/>
                     <Label Content="Top Speed" RenderTransformOrigin="0.5,0.552" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Margin="0,-10,0,-0.9">
                         <Label.Foreground>
